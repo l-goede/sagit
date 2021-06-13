@@ -5,7 +5,6 @@ import domParser from 'dom-parser';
 const router = express.Router();
 
 router.get('/search', (_req, res) => {
-  //   res.status(404).send('Hello World');
   getData('airpods');
   res.status(200).send('ok');
 });
