@@ -17,10 +17,10 @@ async function getData(product: string) {
     `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${product}`
   )
     .then((res) => res.text())
-    .then((raw) => {
+    .then((rawHtml) => {
       const parser = new domParser();
-      const dom = parser.parseFromString(raw);
-      const elements = dom.getElementsByClassName('myofferList-item-priceMin');
-      console.log(elements);
+      const dom = parser.parseFromString(rawHtml);
+      const price = dom.getElementsByClassName('myofferList-item-priceMin');
+      console.log(price);
     });
 }
