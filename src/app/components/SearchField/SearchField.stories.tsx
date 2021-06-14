@@ -7,5 +7,5 @@ export default {
 };
 
 export const search = (): JSX.Element => (
-  <SeachField placeholder="Ich suche..." />
+  <SearchField placeholder="Ich suche..." headline="Dein Wunschprodukt" />
 );

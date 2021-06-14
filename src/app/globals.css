@@ -8,9 +8,19 @@
   --secondary-color: #866835;
   --primary-text-color: #000;
   --secondary-text-color: #726e6e;
+  --searchField-color: #eed7c5;
   --price-color: #6961ed;
   --matched-price-color: #03b461;
   --placeholder-color: #848181;
   --navbar-icon-color: #866835;
   --navbar-background-color: linear-gradient(180deg, #fff, #eed7c5, #d4c7b0);
+  --landingPage-background-color: linear-gradient(180deg, #fff, #eed7c5);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
 }
