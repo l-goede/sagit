@@ -1,2 +1,8 @@
-### Search Code
-GET https://amazon.de
+@port ={{$dotenv PORT}}
+@baseUrl=http://localhost:{{port}}
+
+### Search for Airpods
+GET {{baseUrl}}/api/search?product=airpods
+
+### Search for iPhone
+GET {{baseUrl}}/api/search?product=iphone
