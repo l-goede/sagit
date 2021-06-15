@@ -44,26 +44,3 @@ async function searchProducts(name: string) {
   });
   console.log(products);
 }
-
-//   const rawHtml = await response.text();
-//   const $ = cheerio.load(rawHtml);
-//   const offerListItems = $('.offerList-item-priceMin');
-
-//   const products: {
-//     title: string;
-//     price: string;
-//   }[] = [];
-
-//   offerListItems.each((_i, offerListItem) => {
-//     const title = $(offerListItem)
-//       .find('.offerList-item-description-title')
-//       .text();
-//     const price = $(offerListItem).find('.offerList-item-priceMin').text();
-//     products.push({
-//       title: title,
-//       price: price,
-//     });
-//   });
-
-//   console.log(title, price);
-// }
