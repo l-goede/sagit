@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
 import router from './server/routes';
-import { connectDatabase } from './utils/database';
+import { connectDatabase, disconnectDatabase } from './utils/database';
 
 const { PORT = 3331 } = process.env;
 
@@ -33,6 +33,8 @@ const start = async () => {
     throw new Error('Missing env MONGODB_URL');
   }
   await connectDatabase(process.env.MONGODB_URL);
+
+  await disconnectDatabase();
 };
 
 start();
