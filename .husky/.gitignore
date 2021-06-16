@@ -1,1 +1,4 @@
 _
+.env
+.password
+node_modules

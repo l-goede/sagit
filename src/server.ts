@@ -5,7 +5,7 @@ import path from 'path';
 import router from './server/routes';
 import { connectDatabase } from './utils/database';
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3331 } = process.env;
 
 console.log(process.env.MONGO_URL);
 
@@ -29,10 +29,10 @@ app.listen(PORT, () => {
 });
 
 const start = async () => {
-  if (process.env.MONGO_URL === undefined) {
-    throw new Error('Missing env MONGO_URL');
+  if (process.env.MONGODB_URL === undefined) {
+    throw new Error('Missing env MONGODB_URL');
   }
-  await connectDatabase(process.env.MONGO_URL);
+  await connectDatabase(process.env.MONGODB_URL);
 };
 
 start();

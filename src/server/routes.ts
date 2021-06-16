@@ -1,6 +1,6 @@
 import express from 'express';
 import fetch from 'node-fetch';
-import domParser from 'dom-parser';
+import cheerio from 'cheerio';
 
 const router = express.Router();
 
