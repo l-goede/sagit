@@ -19,12 +19,29 @@ async function searchProducts(name: string) {
   const response = await fetch(
     `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${name}`
   );
-  const rawHtml = await response.text();
 
-  const parser = new domParser();
-  const dom = parser.parseFromString(rawHtml);
-  const price = dom.getElementsByClassName('myofferList-item-priceMin');
-  const product = { name: name, producer: 'tba', price: price };
-  const products = [product];
+  const rawHTML = await response.text();
+  const $ = cheerio.load(rawHTML);
+
+  const offerListItems = $('.offerList-item');
+  const products: {
+    image: string;
+    title: string;
+    price: string;
+  }[] = [];
+  offerListItems.each((_i, offerListItem) => {
+    const productImg = $(offerListItem).find('.offerList-item-image').text();
+    const title = $(offerListItem)
+      .find('.offerList-item-description-title')
+      .text();
+    const price = $(offerListItem).find('.offerList-item-priceMin').text();
+
+    products.push({
+      image: productImg,
+      title: title,
+      price: price,
+    });
+    console.log(title);
+  });
   return products;
 }

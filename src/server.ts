@@ -3,8 +3,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
 import router from './server/routes';
+import { connectDatabase } from './utils/database';
 
 const { PORT = 3001 } = process.env;
+
+console.log(process.env.MONGO_URL);
 
 const app = express();
 
@@ -24,3 +27,12 @@ app.get('*', (_req, res) => {
 app.listen(PORT, () => {
   console.log(`app listening at http://localhost:${PORT}`);
 });
+
+const start = async () => {
+  if (process.env.MONGO_URL === undefined) {
+    throw new Error('Missing env MONGO_URL');
+  }
+  await connectDatabase(process.env.MONGO_URL);
+};
+
+start();
