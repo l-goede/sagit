@@ -1,4 +1,5 @@
 import { Collection, MongoClient } from 'mongodb';
+import { Credential } from '../types';
 
 let client: MongoClient;
 
@@ -15,4 +16,8 @@ export const disconnectDatabase = async (): Promise<void> => {
 };
 export const getCollection = <T>(name: string): Collection<T> => {
   return client.db().collection<T>(name);
+};
+
+export const getCredentialsCollection = (): Collection<Credential> => {
+  return getCollection<Credential>('credentials');
 };
