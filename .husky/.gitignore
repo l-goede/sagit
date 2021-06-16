@@ -1,4 +1,9 @@
-_
-.env
-.password
 node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.eslintcache
+.password
+.env
+db.json
