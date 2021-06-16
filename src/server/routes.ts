@@ -20,13 +20,20 @@ async function searchProducts(name: string) {
     `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${name}`,
     {
       headers: {
-        'accept-language': 'de-DE',
+        'accept-language': 'en-US',
       },
     }
   );
+  //   const rawHtml = await response.text();
+  //   const $ = cheerio.load(rawHtml);
+  //   const price = $('.offerList-item-priceMin');
+
+  //   console.log(price);
+  // }
 
   const rawHTML = await response.text();
   const $ = cheerio.load(rawHTML);
+
   const offerListItems = $('.offerList-item');
   const products: {
     title: string;
@@ -41,6 +48,7 @@ async function searchProducts(name: string) {
       title: title,
       price: price,
     });
+    console.log(title);
   });
-  console.log(products);
+  return products;
 }

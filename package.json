@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "client:dev": "vite",
-    "server:dev": "ts-node --project tsconfig.server.json src/server",
+    "server:dev": "ts-node-dev --project tsconfig.server.json src/server",
     "server:build": "tsc --project tsconfig.server.json",
     "storybook:build": "build-storybook -o dist/storybook",
     "client:build": "vite build",
