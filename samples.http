@@ -6,3 +6,16 @@ GET {{baseUrl}}/api/search?product=airpods
 
 ### Search for iPhone
 GET {{baseUrl}}/api/search?product=iphone
+
+
+
+### Add a new credential
+POST {{baseUrl}}/api/credentials HTTP/1.1
+Content-Type: application/json
+
+{
+    "userService":"Hey",
+    "userName":"Schlu",
+    "userPassword":"lu"
+    
+}
