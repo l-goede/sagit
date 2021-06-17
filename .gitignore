@@ -4,3 +4,6 @@ dist
 dist-ssr
 *.local
 .eslintcache
+.password
+.env
+db.json
