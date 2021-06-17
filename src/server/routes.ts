@@ -1,18 +1,18 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
-import { readCredentials, saveCredential } from '../utils/credentials';
+import { readProductData, saveProductData } from '../utils/credentials';
 
 const router = express.Router();
 
 router.get('/credentials', async (_request, response) => {
-  const credentials = await readCredentials();
+  const credentials = await readProductData();
   response.json(credentials);
 });
 
 router.post('/credentials', async (request, response) => {
-  await saveCredential(request.body);
-  response.send('Credential saved in db');
+  await saveProductData(request.body);
+  response.send('Product saved in db');
 });
 
 router.get('/search', async (req, res) => {

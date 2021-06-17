@@ -1,5 +1,5 @@
 import { Collection, MongoClient } from 'mongodb';
-import { Credential } from '../types';
+import { Product } from '../types';
 
 let client: MongoClient;
 
@@ -18,6 +18,6 @@ export const getCollection = <T>(name: string): Collection<T> => {
   return client.db().collection<T>(name);
 };
 
-export const getCredentialsCollection = (): Collection<Credential> => {
-  return getCollection<Credential>('credentials');
+export const getProductDataCollection = (): Collection<Product> => {
+  return getCollection<Product>('products');
 };

@@ -1,12 +1,12 @@
-import type { Credential } from '../types';
-import { getCredentialsCollection } from './database';
+import type { Product } from '../types';
+import { getProductDataCollection } from './database';
 
-export const readCredentials = async (): Promise<Credential[]> => {
-  return await getCredentialsCollection().find().sort({ service: 1 }).toArray();
+export const readProductData = async (): Promise<Product[]> => {
+  return await getProductDataCollection().find().sort({ service: 1 }).toArray();
 };
 
-export const saveCredential = async (credential: Credential): Promise<void> => {
-  await getCredentialsCollection().insertOne({
-    ...credential,
+export const saveProductData = async (product: Product): Promise<void> => {
+  await getProductDataCollection().insertOne({
+    ...product,
   });
 };

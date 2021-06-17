@@ -1,7 +1,6 @@
-export type Command = 'list' | 'add' | 'delete';
-
-export type Credential = {
-  service: string;
-  username: string;
-  password: string;
+export type Product = {
+  title: string;
+  vendor: string;
+  price: string;
+  favoredPrice: number;
 };
