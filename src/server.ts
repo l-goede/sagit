@@ -7,6 +7,8 @@ import { connectDatabase } from './utils/database';
 
 const { PORT = 3331 } = process.env;
 
+console.log(process.env.MONGO_URL);
+
 const app = express();
 
 app.use(express.json());
