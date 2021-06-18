@@ -1,16 +1,16 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
-import { readProductData, saveProductData } from '../utils/credentials';
+import { readProductData, saveProductData } from '../utils/productData';
 
 const router = express.Router();
 
-router.get('/credentials', async (_request, response) => {
-  const credentials = await readProductData();
-  response.json(credentials);
+router.get('/products', async (_request, response) => {
+  const products = await readProductData();
+  response.json(products);
 });
 
-router.post('/credentials', async (request, response) => {
+router.post('/products', async (request, response) => {
   await saveProductData(request.body);
   response.send('Product saved in db');
 });
@@ -20,8 +20,8 @@ router.get('/search', async (req, res) => {
     res.status(400).send('Query is malformed');
     return;
   }
-  const products = await searchProducts(req.query.product);
-  res.status(200).send(products);
+  const product = await searchProducts(req.query.product);
+  res.status(200).send(product);
 });
 
 export default router;

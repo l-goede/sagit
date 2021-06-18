@@ -2,7 +2,7 @@ import type { Product } from '../types';
 import { getProductDataCollection } from './database';
 
 export const readProductData = async (): Promise<Product[]> => {
-  return await getProductDataCollection().find().sort({ service: 1 }).toArray();
+  return await getProductDataCollection().find().toArray();
 };
 
 export const saveProductData = async (product: Product): Promise<void> => {
