@@ -1,0 +1,17 @@
+.label {
+  display: grid;
+  grid-template-columns: 1em auto;
+  border-radius: 0.5em;
+}
+
+.label__input {
+  background: none;
+  border: none;
+}
+
+.label__input::placeholder {
+  font-weight: lighter;
+  opacity: 50%;
+  padding-left: 3px;
+  display: flex;
+}

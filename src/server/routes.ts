@@ -41,19 +41,22 @@ async function searchProducts(name: string) {
 
   const offerListItems = $('.offerList-item');
   const products: {
+    image: string;
     title: string;
     price: string;
   }[] = [];
   offerListItems.each((_i, offerListItem) => {
+    const image = $(offerListItem).find('.offerList-item-image').text();
     const title = $(offerListItem)
       .find('.offerList-item-description-title')
       .text();
     const price = $(offerListItem).find('.offerList-item-priceMin').text();
     products.push({
+      image: image,
       title: title,
       price: price,
     });
-    console.log(title);
+    console.log(image);
   });
   return products;
 }
