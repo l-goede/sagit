@@ -3,10 +3,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
 import router from './server/routes';
+import { connectDatabase } from './utils/database';
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3331 } = process.env;
+
+console.log(process.env.MONGODB_URL);
 
 const app = express();
+
+app.use(express.json());
 
 app.use('/api', router);
 
@@ -21,6 +26,13 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'app/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`app listening at http://localhost:${PORT}`);
+if (process.env.MONGODB_URL === undefined) {
+  throw new Error('Missing env MONGODB_URL');
+}
+
+connectDatabase(process.env.MONGODB_URL).then(() => {
+  console.log('Database connected');
+  app.listen(PORT, () => {
+    console.log(`Sagit listening at http://localhost:${PORT}`);
+  });
 });

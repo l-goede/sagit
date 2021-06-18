@@ -1,30 +1,59 @@
 import express from 'express';
 import fetch from 'node-fetch';
-import domParser from 'dom-parser';
+import cheerio from 'cheerio';
+import { readProductData, saveProductData } from '../utils/productData';
 
 const router = express.Router();
+
+router.get('/products', async (_request, response) => {
+  const products = await readProductData();
+  response.json(products);
+});
+
+router.post('/products', async (request, response) => {
+  await saveProductData(request.body);
+  response.send('Product saved in db');
+});
 
 router.get('/search', async (req, res) => {
   if (typeof req.query.product !== 'string') {
     res.status(400).send('Query is malformed');
     return;
   }
-  const products = await searchProducts(req.query.product);
-  res.status(200).send(products);
+  const product = await searchProducts(req.query.product);
+  res.status(200).send(product);
 });
 
 export default router;
 
 async function searchProducts(name: string) {
   const response = await fetch(
-    `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${name}`
+    `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${name}`,
+    {
+      headers: {
+        'accept-language': 'en-US',
+      },
+    }
   );
-  const rawHtml = await response.text();
 
-  const parser = new domParser();
-  const dom = parser.parseFromString(rawHtml);
-  const price = dom.getElementsByClassName('myofferList-item-priceMin');
-  const product = { name: name, producer: 'tba', price: price };
-  const products = [product];
+  const rawHTML = await response.text();
+  const $ = cheerio.load(rawHTML);
+
+  const offerListItems = $('.offerList-item');
+  const products: {
+    title: string;
+    price: string;
+  }[] = [];
+  offerListItems.each((_i, offerListItem) => {
+    const title = $(offerListItem)
+      .find('.offerList-item-description-title')
+      .text();
+    const price = $(offerListItem).find('.offerList-item-priceMin').text();
+    products.push({
+      title: title,
+      price: price,
+    });
+    console.log(title);
+  });
   return products;
 }
