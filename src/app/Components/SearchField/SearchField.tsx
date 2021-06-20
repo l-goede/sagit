@@ -1,26 +1,31 @@
 import React from 'react';
 import styles from './SearchField.module.css';
 
-type InputProps = {
+type LabeledInputProps = {
+  label: string;
   value: string;
   placeholder: string;
   onChange: (value: string) => void;
 };
 
 function SearchField({
+  label,
   value,
   placeholder,
   onChange,
-}: InputProps): JSX.Element {
+}: LabeledInputProps): JSX.Element {
   return (
-    <label className={styles.label}>
-      <input
-        className={styles.label__input}
-        value={value}
-        placeholder={placeholder}
-        onChange={(event) => onChange(event.target.value)}
-      />
-    </label>
+    <div className={styles.container}>
+      <label className={styles.container__label}>
+        {label}
+        <input
+          className={styles.container__input}
+          value={value}
+          placeholder={placeholder}
+          onChange={(event) => onChange(event.target.value)}
+        />
+      </label>
+    </div>
   );
 }
 
