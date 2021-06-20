@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap');
+
 *,
 *::after,
 *::before {
@@ -6,7 +8,9 @@
 
 :root {
   /* FONTS */
-  --font-family: sans-serif;
+  --font-family: 'worksans';
+
+  /* COLORS */
   --primary-color: #987c4c;
   --secondary-color: #726e67;
   --primary-text-color: #000;
@@ -28,6 +32,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-family);
+  width: 100%;
 }
 
 a {
