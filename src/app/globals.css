@@ -8,7 +8,7 @@
 
 :root {
   /* FONTS */
-  --font-family: 'worksans';
+  --font-family: 'worksans', 'sans-serif';
 
   /* COLORS */
   --primary-color: #987c4c;
