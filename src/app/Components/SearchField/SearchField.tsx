@@ -16,8 +16,8 @@ function SearchField({
 }: LabeledInputProps): JSX.Element {
   return (
     <div className={styles.container}>
-      <label className={styles.container__label}>
-        {label}
+      <label>
+        <div className={styles.container__label}>{label}</div>
         <input
           className={styles.container__input}
           value={value}

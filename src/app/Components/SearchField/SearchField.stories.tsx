@@ -10,7 +10,7 @@ export const search = (): JSX.Element => (
   <SearchField
     label="Dein Wunschprodukt"
     value=""
-    placeholder="Ich suche.."
+    placeholder="Ich suche..."
     onChange={console.log}
   />
 );
