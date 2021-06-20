@@ -1,6 +1,7 @@
 .container__label {
   font-size: 2em;
   font-family: sans-serif;
+  color: var(--primary-color);
 }
 
 .container__input {
