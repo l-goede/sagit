@@ -1,16 +1,28 @@
+.container {
+  display: grid;
+  justify-items: center;
+}
+
 .container__label {
-  font-size: 2em;
-  font-family: sans-serif;
-  color: var(--primary-color);
+  font-size: 1.2em;
+  font-family: var(--primary-font);
+  color: var(--secondary-text-color);
+  letter-spacing: 0.08em;
 }
 
 .container__input {
   border: none;
-  background-color: var(--input-color);
+  background: var(--input-color);
   border-radius: 2.5em;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+  padding: 0.5em 5.7em 0.5em 0.5em;
+  margin-top: 0.4em;
+  align-items: center;
+  margin-left: 0;
 }
 
-.container__label::placeholder {
+.container__input::placeholder {
   color: var(--placeholder-color);
+  font-family: var(--primary-font);
+  padding: 0.5em;
 }

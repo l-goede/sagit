@@ -3,9 +3,9 @@ import SearchIcon from '../Icons/SearchIcon';
 import NotificationIcon from '../Icons/NotificationIcon';
 import WatchListIcon from '../Icons/WatchListIcon';
 import NavBarLink from '../NavBarLink/NavBarLink';
-import styles from './NavBar.module.css';
+import styles from './Footer.module.css';
 
-function NavBar(): JSX.Element {
+function Footer(): JSX.Element {
   return (
     <div className={styles.navBar}>
       <NavBarLink icon={<SearchIcon />} link="/" />
@@ -15,4 +15,4 @@ function NavBar(): JSX.Element {
   );
 }
 
-export default NavBar;
+export default Footer;

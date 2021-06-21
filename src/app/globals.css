@@ -8,7 +8,7 @@
 
 :root {
   /* FONTS */
-  --font-family: 'worksans', 'sans-serif';
+  --primary-font: 'Work Sans', 'sans-serif';
 
   /* COLORS */
   --primary-color: #987c4c;
@@ -17,7 +17,7 @@
   --secondary-text-color: #866835;
   --price-text-color: #6961ed;
   --background-color: #fff;
-  --input-colorw: #eed7c5, 0.5;
+  --input-color: rgba(134, 104, 53, 0.2);
   --placeholder-color: #848181;
   --navbar-background-color: #fff;
   --navbar-icon-color: #866835;
@@ -32,7 +32,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-family);
+  font-family: var(--primary-font);
   width: 100%;
 }
 

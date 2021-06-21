@@ -7,7 +7,7 @@ function NotificationIcon(): JSX.Element {
       width="18"
       height="18"
       viewBox="0 0 31.407 37.117"
-      fill="var(--navbar-icon-color"
+      fill="var(--navbar-icon-color)"
     >
       <path
         id="Icon_ionic-md-notifications-outline"
