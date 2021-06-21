@@ -1,0 +1,16 @@
+.container__label {
+  font-size: 2em;
+  font-family: sans-serif;
+  color: var(--primary-color);
+}
+
+.container__input {
+  border: none;
+  background-color: var(--input-color);
+  border-radius: 2.5em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.container__label::placeholder {
+  color: var(--placeholder-color);
+}
