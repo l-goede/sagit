@@ -19,7 +19,12 @@
   --background-color: #fff;
   --input-color: rgba(134, 104, 53, 0.2);
   --placeholder-color: #848181;
-  --navbar-background-color: #fff;
+  --navbar-background-color: linear-gradient(
+    rgba(250, 248, 248, 0.2),
+    rgba(134, 104, 53, 0.2),
+    rgba(134, 104, 53, 0.4),
+    rgba(134, 104, 53, 0.6)
+  );
   --navbar-icon-color: #866835;
 
   /* SIZES */
