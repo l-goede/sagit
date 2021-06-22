@@ -58,8 +58,7 @@
     "vite": "^2.2.3"
   },
   "dependencies": {
-    "cheerio": "*",
-    "dom-parser": "^0.1.6",
+    "cheerio": "^1.0.0-rc.10",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.9",

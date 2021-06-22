@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import styles from './App.module.css';
-import Button from './Components/SampleButton/SampleButton';
+import Button from './components/SampleButton/SampleButton';
 
 function App(): JSX.Element {
   // const [count, setCount] = useState<number>(0);
