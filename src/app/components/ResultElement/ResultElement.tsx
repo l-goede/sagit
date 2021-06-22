@@ -17,9 +17,11 @@ function ResultElement({
   return (
     <div className={styles.resultElement}>
       <img className={styles.resultElement__img} src={imgSrc} />
-      <h3 className={styles.resultElement__title}>{title}</h3>
-      <span className={styles.resultElement__vendor}>{vendor}</span>
-      <span className={styles.resultElement__price}>{price}</span>
+      <div className={styles.resultElement__info}>
+        <h3 className={styles.resultElement__title}>{title}</h3>
+        <p className={styles.resultElement__vendor}>{vendor}</p>
+        <p className={styles.resultElement__price}>{price}</p>
+      </div>
     </div>
   );
 }
