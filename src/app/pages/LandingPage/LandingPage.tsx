@@ -1,9 +1,10 @@
 import React from 'react';
 import LogoIcon from '../../components/Icons/LogoIcon';
+import styles from './LandingPage.module.css';
 
 function LandingPage(): JSX.Element {
   return (
-    <div>
+    <div className={styles.landingPage}>
       <LogoIcon />
     </div>
   );
