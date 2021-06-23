@@ -6,7 +6,7 @@ export default {
   component: SearchField,
 };
 
-export const search = (): JSX.Element => (
+export const Search = (): JSX.Element => (
   <SearchField
     label="Dein Wunschprodukt"
     value=""
