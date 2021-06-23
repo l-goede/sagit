@@ -1,6 +1,6 @@
 .resultElement {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 4fr;
   border-radius: 0.5em;
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   letter-spacing: 0.08em;
@@ -10,13 +10,14 @@
 .resultElement__img {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  height: 10em;
-  width: 8em;
+  height: 100%;
+  width: 100%;
 }
 
 .resultElement__info {
   display: grid;
-  grid-auto-flow: row;
+  padding-left: 2em;
+  grid-column: 2;
   align-self: start;
 }
 .resultElement__title {
