@@ -15,12 +15,12 @@ function ResultProducts({
   price,
 }: ResultProps): JSX.Element {
   return (
-    <div className={styles.resultElement}>
-      <img className={styles.resultElement__img} src={imgSrc} />
-      <div className={styles.resultElement__card}>
-        <h3 className={styles.resultElement__title}>{title}</h3>
-        <p className={styles.resultElement__vendor}>{vendor}</p>
-        <p className={styles.resultElement__price}>{price}</p>
+    <div className={styles.resultProduct}>
+      <img className={styles.resultProduct__img} src={imgSrc} />
+      <div className={styles.resultProduct__card}>
+        <h3 className={styles.resultProduct__title}>{title}</h3>
+        <p className={styles.resultProduct__vendor}>{vendor}</p>
+        <p className={styles.resultProduct__price}>{price}</p>
       </div>
     </div>
   );

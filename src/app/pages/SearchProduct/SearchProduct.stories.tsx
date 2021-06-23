@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export const Default = (): JSX.Element => <SearchProduct />;
+export const Search = (): JSX.Element => <SearchProduct />;
