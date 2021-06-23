@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ResultElement.module.css';
+import styles from './ResultProducts.module.css';
 
 type ResultProps = {
   imgSrc: string;
@@ -8,7 +8,7 @@ type ResultProps = {
   price: string;
 };
 
-function ResultElement({
+function ResultProducts({
   imgSrc,
   title,
   vendor,
@@ -26,4 +26,4 @@ function ResultElement({
   );
 }
 
-export default ResultElement;
+export default ResultProducts;
