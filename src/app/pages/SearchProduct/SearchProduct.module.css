@@ -10,3 +10,9 @@
   justify-content: center;
   margin: 4em 0 2em 0;
 }
+
+.cards {
+  display: grid;
+  grid-row-gap: 1em;
+  margin-top: 1em;
+}

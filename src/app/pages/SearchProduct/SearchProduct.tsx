@@ -22,6 +22,14 @@ function SearchProduct(): JSX.Element {
           vendor="ebay"
           price="ab 148 €"
         />
+        <div className={styles.cards}>
+          <ResultProducts
+            imgSrc="https://www.investireoggi.it/tech/wp-content/uploads/sites/14/2014/02/iphone4s.jpg"
+            title="Apple iPhone 4"
+            vendor="Amazon"
+            price="ab 327 €"
+          />
+        </div>
       </main>
       <footer className={styles.footer}>
         <Footer />
