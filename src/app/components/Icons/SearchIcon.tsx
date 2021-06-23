@@ -6,7 +6,7 @@ function SearchIcon(): JSX.Element {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="50"
+      width="35"
       height="45"
       viewBox="0 0 30 30"
       fill="var(--navbar-icon-color)"

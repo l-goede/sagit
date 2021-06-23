@@ -6,7 +6,7 @@ function WatchListIcon(): JSX.Element {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="50"
+      width="34"
       height="45"
       viewBox="0 0 48 48"
       fill="var(--navbar-icon-color)"

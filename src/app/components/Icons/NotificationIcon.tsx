@@ -4,7 +4,7 @@ function NotificationIcon(): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="50"
+      width="25"
       height="40"
       viewBox="0 0 31.407 37.117"
       fill="var(--navbar-icon-color)"
