@@ -4,8 +4,6 @@ import styles from './App.module.css';
 import Button from './components/SampleButton/SampleButton';
 
 function App(): JSX.Element {
-  // const [count, setCount] = useState<number>(0);
-
   return (
     <div className={styles.App}>
       <header className={styles['App-header']}>
