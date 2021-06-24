@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchField from '../../components/SearchField/SearchField';
 import ResultProducts from '../../components/ResultProducts/ResultProducts';
 import Footer from '../../components/Footer/Footer';
 import styles from './SearchProduct.module.css';
 
 function SearchProduct(): JSX.Element {
+  const [product, setProduct] = useState('');
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <SearchField
           label="Dein Wunschprodukt"
-          value=""
+          value={product}
           placeholder="Ich suche..."
-          onChange={console.log}
+          onChange={setProduct}
         />
       </header>
       <main className={styles.main}>
