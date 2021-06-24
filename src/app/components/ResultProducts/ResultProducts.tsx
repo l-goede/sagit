@@ -18,7 +18,7 @@ function ResultProducts({
     <div className={styles.resultProduct}>
       <img className={styles.resultProduct__img} src={imgSrc} />
       <div className={styles.resultProduct__card}>
-        <h3 className={styles.resultProduct__title}>{title}</h3>
+        <p className={styles.resultProduct__title}>{title}</p>
         <p className={styles.resultProduct__vendor}>{vendor}</p>
         <p className={styles.resultProduct__price}>{price}</p>
       </div>
