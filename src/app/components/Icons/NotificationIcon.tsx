@@ -3,7 +3,7 @@ import React from 'react';
 function NotificationIcon(): JSX.Element {
   return (
     <svg
-      width="25"
+      width="20"
       height="40"
       viewBox="0 0 31.407 37.117"
       fill="var(--navbar-icon-color)"

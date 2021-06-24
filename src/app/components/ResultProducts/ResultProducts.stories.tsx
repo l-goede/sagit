@@ -1,13 +1,13 @@
 import React from 'react';
-import ResultElement from './ResultElement';
+import ResultProducts from './ResultProducts';
 
 export default {
-  title: 'Component/ResultElement',
-  component: ResultElement,
+  title: 'Component/ResultProducts',
+  component: ResultProducts,
 };
 
 export const ResultAirpods = (): JSX.Element => (
-  <ResultElement
+  <ResultProducts
     imgSrc="https://appletoolbox.com/wp-content/uploads/2019/10/Airpods-pro-3.jpg"
     title="Apple Airpods 2. Generation"
     vendor="ebay"
@@ -16,7 +16,7 @@ export const ResultAirpods = (): JSX.Element => (
 );
 
 export const ResultIphone = (): JSX.Element => (
-  <ResultElement
+  <ResultProducts
     imgSrc="https://www.investireoggi.it/tech/wp-content/uploads/sites/14/2014/02/iphone4s.jpg"
     title="Apple iPhone 4"
     vendor="Amazon"

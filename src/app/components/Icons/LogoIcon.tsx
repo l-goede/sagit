@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Logo(): JSX.Element {
+function LogoIcon(): JSX.Element {
   return (
-    <svg width="237.626" height="216.05" viewBox="0 0 237.626 216.05">
+    <svg width="237" height="215" viewBox="0 0 237.626 216.05">
       <g
         id="Gruppe_345"
         data-name="Gruppe 345"
@@ -317,4 +317,4 @@ function Logo(): JSX.Element {
     </svg>
   );
 }
-export default Logo;
+export default LogoIcon;

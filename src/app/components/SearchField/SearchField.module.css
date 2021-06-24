@@ -4,7 +4,7 @@
 }
 
 .container__label {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: var(--primary-font);
   color: var(--secondary-text-color);
   letter-spacing: 0.06em;
@@ -16,7 +16,7 @@
   background: var(--input-color);
   border-radius: 2.5em;
   box-shadow: 0 0.125em 0.3em rgba(0, 0, 0, 0.16);
-  padding: 0.5em 5.7em 0.5em 0.5em;
+  padding: 0.5em 9.3em 0.5em 0.5em;
   margin-top: 0.4em;
   align-items: center;
   margin-left: 0;
@@ -26,4 +26,5 @@
   color: var(--placeholder-color);
   font-family: var(--primary-font);
   padding: 0.5em;
+  font-size: 1.2em;
 }
