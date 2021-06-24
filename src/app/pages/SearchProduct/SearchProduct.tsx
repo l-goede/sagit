@@ -3,18 +3,21 @@ import SearchField from '../../components/SearchField/SearchField';
 import ResultProducts from '../../components/ResultProducts/ResultProducts';
 import Footer from '../../components/Footer/Footer';
 import styles from './SearchProduct.module.css';
+import useFetch from '../../components/hooks/useFetch';
 
 function SearchProduct(): JSX.Element {
-  const [product, setProduct] = useState('');
+  const [products, setProducts] = useState('');
+  const product = useFetch('/api/product/airpods');
+  console.log(product);
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <SearchField
           label="Dein Wunschprodukt"
-          value={product}
+          value={products}
           placeholder="Ich suche..."
-          onChange={setProduct}
+          onChange={setProducts}
         />
       </header>
       <main className={styles.main}>
