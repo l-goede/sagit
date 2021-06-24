@@ -31,6 +31,7 @@ async function searchProducts(name: string) {
     `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${name}`,
     {
       headers: {
+        'User-Agent': 'Mozilla/5.0',
         'accept-language': 'en-US',
       },
     }
