@@ -4,12 +4,19 @@ import { useEffect, useState } from 'react';
 const useFetch = (url: string): any => {
   const [product, setProduct] = useState(null);
   useEffect(() => {
-    const fetchProductData = async () => {
-      const res = await fetch(url);
-      const json = await res.json();
-      setProduct(json);
+    const timeout = setTimeout(() => {
+      const fetchProductData = async () => {
+        const res = await fetch(url);
+        const json = await res.json();
+        setProduct(json);
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        fetchProductData();
+      };
+    }, 200);
+    return () => {
+      clearTimeout(timeout);
     };
-    fetchProductData();
   }, [url]);
 
   return product;
