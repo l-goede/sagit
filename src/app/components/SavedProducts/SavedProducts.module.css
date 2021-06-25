@@ -47,3 +47,10 @@
   margin: 0.2em 0;
   padding-bottom: 1em;
 }
+
+.savedProduct__targetPrice {
+  color: var(--secondary-text-color);
+  font-size: 1em;
+  margin: 0.2em 0;
+  padding-bottom: 1em;
+}

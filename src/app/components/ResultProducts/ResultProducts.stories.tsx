@@ -10,7 +10,7 @@ export default {
 //   <ResultProducts
 //     image="https://cdn.idealo.com/folder/Product/6837/6/68376…/s1_produktbild_mittelgross/apple-airpods-pro.jpg"
 //     title="Apple Airpods 2. Generation"
-//     vendor="ebay"
+//     offers="83 Angebote"
 //     price="ab 148 €"
 //   />
 // );
@@ -19,7 +19,7 @@ export default {
 //   <ResultProducts
 //     image="https://cdn.idealo.com/folder/Product/3039/6/3039679/s1_produktbild_mittelgross/apple-iphone-4s.jpg"
 //     title="Apple iPhone 4"
-//     vendor="Amazon"
+//     offers="44 Angebote"
 //     price="ab 327 €"
 //   />
 // );

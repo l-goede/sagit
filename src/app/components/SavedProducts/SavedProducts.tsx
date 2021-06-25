@@ -1,7 +1,7 @@
 import React from 'react';
 import { Product } from '../../../types';
 import NotificationIcon from '../Icons/NotificationIcon';
-import styles from './ResultProducts.module.css';
+import styles from './SavedProducts.module.css';
 
 type ProductProps = {
   icon: JSX.Element;
