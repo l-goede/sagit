@@ -42,18 +42,20 @@ async function searchProducts(name: string) {
 
   const offerListItems = $('.offerList-item');
   const products: {
+    id: string;
     image: string;
     title: string;
     price: string;
   }[] = [];
-  offerListItems.each((_i, offerListItem) => {
-    const image = $(offerListItem).find('.offerList-item-image').text();
+  offerListItems.each((i, offerListItem) => {
+    const image = $(offerListItem).find('.offerList-item-image').attr('src');
     const title = $(offerListItem)
       .find('.offerList-item-description-title')
       .text();
     const price = $(offerListItem).find('.offerList-item-priceMin').text();
     products.push({
-      image: image,
+      id: i.toString(),
+      image: image || '',
       title: title,
       price: price,
     });

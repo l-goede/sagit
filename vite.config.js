@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 

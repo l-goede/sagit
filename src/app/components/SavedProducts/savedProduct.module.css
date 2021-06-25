@@ -1,0 +1,49 @@
+.savedProduct {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-radius: 0.5em;
+  box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
+  letter-spacing: 0.08em;
+  margin: 0 auto;
+  height: 6em;
+  width: 18em;
+  transition: all ease-in-out 150ms;
+}
+.savedProduct:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out 150ms;
+}
+
+.savedProduct__img {
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.savedProduct__card {
+  padding-left: 1em;
+  margin-right: 1em;
+}
+
+.savedProduct__title {
+  font-size: 0.95em;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.2em;
+}
+
+.savedProduct__vendor {
+  color: var(--primary-color);
+  font-size: 1em;
+  margin-bottom: 0.4em;
+}
+
+.savedProduct__price {
+  color: var(--secondary-text-color);
+  font-size: 1em;
+  margin: 0.2em 0;
+  padding-bottom: 1em;
+}

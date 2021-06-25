@@ -10,7 +10,7 @@ const useFetch = (url: string): any => {
       setProduct(json);
     };
     fetchProductData();
-  }, []);
+  }, [url]);
 
   return product;
 };
