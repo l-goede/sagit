@@ -17,7 +17,7 @@ function savedProducts({ icon, product }: ProductProps): JSX.Element {
         <button className={styles.savedProduct__button}>
           {icon}={<NotificationIcon />}
         </button>
-        <p className={styles.savedProduct__vendor}>{product.vendor}</p>
+        <p className={styles.savedProduct__vendor}>{product.offers}</p>
         <p className={styles.savedProduct__price}>{product.price}</p>
         <p className={styles.savedProduct__targetPrice}>
           {product.targetPrice}

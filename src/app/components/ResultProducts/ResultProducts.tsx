@@ -12,7 +12,7 @@ function ResultProducts({ product }: ProductProps): JSX.Element {
       <img className={styles.resultProduct__img} src={product.image} />
       <div className={styles.resultProduct__card}>
         <p className={styles.resultProduct__title}>{product.title}</p>
-        <p className={styles.resultProduct__vendor}>{product.vendor}</p>
+        <p className={styles.resultProduct__offers}>{product.offers}</p>
         <p className={styles.resultProduct__price}>{product.price}</p>
       </div>
     </div>

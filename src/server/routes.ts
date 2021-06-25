@@ -45,6 +45,7 @@ async function searchProducts(name: string) {
     id: string;
     image: string;
     title: string;
+    offers: string;
     price: string;
   }[] = [];
   offerListItems.each((i, offerListItem) => {
@@ -52,11 +53,15 @@ async function searchProducts(name: string) {
     const title = $(offerListItem)
       .find('.offerList-item-description-title')
       .text();
+    const offers = $(offerListItem)
+      .find('.offerList-item-pricePrefixCount')
+      .text();
     const price = $(offerListItem).find('.offerList-item-priceMin').text();
     products.push({
       id: i.toString(),
       image: image || '',
       title: title,
+      offers: offers,
       price: price,
     });
     console.log(image);
