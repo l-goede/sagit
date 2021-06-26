@@ -17,7 +17,7 @@ export const SavedAirpods = (): JSX.Element => (
       title: 'Apple Airpods 2. Generation',
       offers: '83 Angebote',
       price: 'Aktueller Preis: ab 148 €',
-      targetPrice: 'Wunschpreis: 120 €',
     }}
+    targetPrice="Wunschpreis: 120 €"
   />
 );

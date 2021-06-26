@@ -1,3 +1,17 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-auto-rows: auto;
+}
+
+.backButton {
+  border: none;
+  background: none;
+}
+
+.headline {
+  color: var(--secondary-text-color);
+  font-size: 1.4em;
+  letter-spacing: 0.06em;
+  margin-left: 1em;
+  padding-top: 0.3em;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import ResultProducts from './ResultProducts';
 
 export default {
@@ -6,16 +6,15 @@ export default {
   component: ResultProducts,
 };
 
-export const ResultAirpods = (): JSX.Element => (
-  <ResultProducts
-    icon={<NotificationIcon />}
-    id="Hi"
-    image="https://cdn.idealo.com/folder/Product/6837/6/68376…/s1_produktbild_mittelgross/apple-airpods-pro.jpg"
-    title="Apple Airpods 2. Generation"
-    offers="83 Angebote"
-    price="ab 148 €"
-  />
-);
+// export const ResultAirpods = (): JSX.Element => (
+//   <ResultProducts
+//     id="Hi"
+//     image="https://cdn.idealo.com/folder/Product/6837/6/68376…/s1_produktbild_mittelgross/apple-airpods-pro.jpg"
+//     title="Apple Airpods 2. Generation"
+//     offers="83 Angebote"
+//     price="ab 148 €"
+//   />
+// );
 
 // export const ResultIphone = (): JSX.Element => (
 //   <ResultProducts
