@@ -1,26 +1,27 @@
 import React from 'react';
+import { Product } from '../../../types';
 import Footer from '../../components/Footer/Footer';
-// import SavedProducts from '../../components/SavedProducts/SavedProducts';
-import WatchListHeader from '../../components/WatchList/WatchList';
+import useFetch from '../../components/hooks/useFetch';
+import ResultProducts from '../../components/ResultProducts/ResultProducts';
+import WatchListHeader from '../../components/WatchList/WatchListHeader';
 import styles from './WatchList.module.css';
 
 function WatchList(): JSX.Element {
+  const products: Product[] = useFetch('/api/products');
   return (
     <div className={styles.container}>
-      <header>
-        <WatchListHeader headline="Deine Merkliste" />
-      </header>
-      {/* //       <main className={styles.main}>
-//         <div className={styles.cards}>
-//           <SavedProducts key={product.id} product={product} />
-//         </div>
-//       </main> */}
-      //{' '}
+      <WatchListHeader headline="Deine Liste" />
+      <main className={styles.main}>
+        <div className={styles.cards}>
+          {products &&
+            products.map((product: Product) => (
+              <ResultProducts key={product.id} product={product} />
+            ))}
+        </div>
+      </main>
       <footer>
-        // <Footer />
-        //{' '}
+        <Footer />
       </footer>
-      //{' '}
     </div>
   );
 }

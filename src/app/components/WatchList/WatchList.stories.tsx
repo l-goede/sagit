@@ -1,5 +1,5 @@
 import React from 'react';
-import WatchListHeader from './WatchList';
+import WatchListHeader from './WatchListHeader';
 
 export default {
   title: 'Component/WatchList',
