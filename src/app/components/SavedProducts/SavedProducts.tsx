@@ -1,6 +1,5 @@
 import React from 'react';
 import { Product } from '../../../types';
-import NotificationIcon from '../Icons/NotificationIcon';
 import styles from './SavedProducts.module.css';
 
 type ProductProps = {
@@ -14,10 +13,8 @@ function savedProducts({ icon, product }: ProductProps): JSX.Element {
       <img className={styles.savedProduct__img} src={product.image} />
       <div className={styles.savedProduct__card}>
         <p className={styles.savedProduct__title}>{product.title}</p>
-        <button className={styles.savedProduct__button}>
-          {icon}={<NotificationIcon />}
-        </button>
-        <p className={styles.savedProduct__vendor}>{product.offers}</p>
+        <button className={styles.savedProduct__button}>{icon}</button>
+        <p className={styles.savedProduct__offers}>{product.offers}</p>
         <p className={styles.savedProduct__price}>{product.price}</p>
         <p className={styles.savedProduct__targetPrice}>
           {product.targetPrice}
