@@ -9,10 +9,8 @@ const useFetch = (url: string): any => {
         const res = await fetch(url);
         const json = await res.json();
         setProduct(json);
-
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        fetchProductData();
       };
+      fetchProductData();
     }, 200);
     return () => {
       clearTimeout(timeout);
