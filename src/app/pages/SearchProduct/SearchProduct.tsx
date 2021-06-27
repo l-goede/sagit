@@ -23,10 +23,9 @@ function SearchProduct(): JSX.Element {
       </header>
       <main className={styles.main}>
         <div className={styles.cards}>
-          {products &&
-            products.map((product: Product) => (
-              <ResultProducts key={product.id} product={product} />
-            ))}
+          {products?.map((product: Product) => (
+            <ResultProducts key={product.id} product={product} />
+          ))}
         </div>
       </main>
       <footer className={styles.footer}>
