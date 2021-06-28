@@ -1,9 +1,9 @@
 import React from 'react';
 
-function NotificationIcon(): JSX.Element {
+function SaveIcon(): JSX.Element {
   return (
     <svg
-      width="20"
+      width="16"
       height="40"
       viewBox="0 0 31.407 37.117"
       fill="var(--navbar-icon-color)"
@@ -15,4 +15,4 @@ function NotificationIcon(): JSX.Element {
     </svg>
   );
 }
-export default NotificationIcon;
+export default SaveIcon;

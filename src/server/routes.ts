@@ -31,6 +31,7 @@ async function searchProducts(name: string) {
     `https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${name}`,
     {
       headers: {
+        'User-Agent': 'Mozilla/5.0',
         'accept-language': 'en-US',
       },
     }
@@ -41,19 +42,32 @@ async function searchProducts(name: string) {
 
   const offerListItems = $('.offerList-item');
   const products: {
+    id: string;
     image: string;
     title: string;
+    description: string;
     price: string;
   }[] = [];
-  offerListItems.each((_i, offerListItem) => {
-    const image = $(offerListItem).find('.offerList-item-image').text();
+  offerListItems.each((i, offerListItem) => {
+    const image = $(offerListItem).find('.offerList-item-image').attr('src');
     const title = $(offerListItem)
       .find('.offerList-item-description-title')
-      .text();
-    const price = $(offerListItem).find('.offerList-item-priceMin').text();
+      .text()
+      .trim();
+    const description = $(offerListItem)
+      .find('.description-part-one')
+      .text()
+      .trim();
+    const price = $(offerListItem)
+      .find('.offerList-item-priceMin')
+      .text()
+      .replace('\n', '')
+      .trim();
     products.push({
-      image: image,
+      id: i.toString(),
+      image: image || '',
       title: title,
+      description: description,
       price: price,
     });
     console.log(image);

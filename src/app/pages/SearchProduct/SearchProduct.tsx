@@ -1,34 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchField from '../../components/SearchField/SearchField';
 import ResultProducts from '../../components/ResultProducts/ResultProducts';
 import Footer from '../../components/Footer/Footer';
 import styles from './SearchProduct.module.css';
+import useFetch from '../../components/hooks/useFetch';
+import type { Product } from '../../../types';
 
 function SearchProduct(): JSX.Element {
+  const [productName, setProductName] = useState<string>('');
+  const products: Product[] = useFetch(`/api/search?product=${productName}`);
+  console.log(products);
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <SearchField
           label="Dein Wunschprodukt"
-          value=""
+          value={productName}
           placeholder="Ich suche..."
-          onChange={console.log}
+          onChange={setProductName}
         />
       </header>
       <main className={styles.main}>
-        <ResultProducts
-          imgSrc="https://appletoolbox.com/wp-content/uploads/2019/10/Airpods-pro-3.jpg"
-          title="Apple Airpods 2. Generation"
-          vendor="ebay"
-          price="ab 148 €"
-        />
         <div className={styles.cards}>
-          <ResultProducts
-            imgSrc="https://www.investireoggi.it/tech/wp-content/uploads/sites/14/2014/02/iphone4s.jpg"
-            title="Apple iPhone 4"
-            vendor="Amazon"
-            price="ab 327 €"
-          />
+          {products?.map((product: Product) => (
+            <ResultProducts key={product.id} product={product} />
+          ))}
         </div>
       </main>
       <footer className={styles.footer}>
