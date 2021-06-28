@@ -2,22 +2,22 @@ import { useEffect, useState } from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useFetch = (url: string): any => {
-  const [product, setProduct] = useState(null);
+  const [data, setData] = useState(null);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      const fetchProductData = async () => {
+      const fetchData = async () => {
         const res = await fetch(url);
         const json = await res.json();
-        setProduct(json);
+        setData(json);
       };
-      fetchProductData();
+      fetchData();
     }, 200);
     return () => {
       clearTimeout(timeout);
     };
   }, [url]);
 
-  return product;
+  return data;
 };
 
 export default useFetch;
