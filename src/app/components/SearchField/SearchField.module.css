@@ -28,3 +28,8 @@
   padding: 0.5em;
   font-size: 1.2em;
 }
+
+.container__input:focus {
+  outline: none;
+  border: 0.1em solid var(--secondary-text-color);
+}
