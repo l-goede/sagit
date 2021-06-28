@@ -4,7 +4,7 @@
   border-radius: 0.5em;
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   margin: 0 auto;
-  height: 10em;
+  height: 9em;
   width: 80%;
   max-width: 25em;
   transition: all ease-in-out 150ms;
@@ -43,24 +43,24 @@ button:hover {
 }
 
 .resultProduct__title {
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 0;
   margin: 0;
-  margin-top: 0.2em;
   max-width: 80%;
 }
 
 .resultProduct__description {
   color: var(--primary-color);
-  font-size: 0.7em;
-  margin-bottom: 0.4em;
+  font-size: 0.8em;
+  margin-top: 0;
+  margin-bottom: 0.25em;
   max-width: 80%;
   letter-spacing: 0;
 }
 
 .resultProduct__price {
   color: var(--secondary-text-color);
-  font-size: 1em;
-  margin: 0.2em 0;
+  font-size: 0.9em;
+  margin: 0.25em 0;
   padding-bottom: 1em;
 }
