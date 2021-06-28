@@ -16,7 +16,7 @@ function ResultProducts({ product }: ProductProps): JSX.Element {
       },
       body: JSON.stringify({
         ...product,
-        targetPrice: '200€',
+        targetPrice: '200 €',
       }),
     });
     if (!response.ok) {

@@ -10,7 +10,7 @@ function WatchList(): JSX.Element {
   const products: Product[] = useFetch('/api/products');
   return (
     <div className={styles.container}>
-      <WatchListHeader headline="Deine Liste" />
+      <WatchListHeader headline="Deine Merkliste" />
       <main className={styles.main}>
         <div className={styles.cards}>
           {products &&
