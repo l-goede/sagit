@@ -12,7 +12,7 @@ function SelectedProduct({ product }: SelectedProductProps): JSX.Element {
       <img className={styles.selectedProduct__img} src={product.image} />
       <div className={styles.selectedProduct__card}>
         <p className={styles.selectedProduct__title}>{product.title}</p>
-        <p className={styles.resultProduct__price}>{product.price}</p>
+        <p className={styles.selectedProduct__price}>{product.price}</p>
       </div>
     </div>
   );
