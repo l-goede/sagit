@@ -7,6 +7,7 @@ import useFetch from '../../components/hooks/useFetch';
 import type { Product } from '../../../types';
 
 function SearchProduct(): JSX.Element {
+  const [showPriceInput, setShowPriceInput] = useState<Product | null>(null);
   const [productName, setProductName] = useState<string>('');
   const products: Product[] = useFetch(`/api/search?product=${productName}`);
   console.log(products);
@@ -21,10 +22,23 @@ function SearchProduct(): JSX.Element {
           onChange={setProductName}
         />
       </header>
+
+      <div className={styles.modal}>
+        {showPriceInput && (
+          <div>
+            {showPriceInput.title}{' '}
+            <button onClick={() => setShowPriceInput(null)}>Close</button>
+          </div>
+        )}
+      </div>
       <main className={styles.main}>
         <div className={styles.cards}>
           {products?.map((product: Product) => (
-            <ResultProducts key={product.id} product={product} />
+            <ResultProducts
+              key={product.id}
+              product={product}
+              onClick={() => setShowPriceInput(product)}
+            />
           ))}
         </div>
       </main>

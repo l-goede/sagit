@@ -5,6 +5,10 @@
   margin: 0 auto;
 }
 
+.modal {
+  background: hotpink;
+}
+
 .header {
   display: flex;
   justify-content: center;

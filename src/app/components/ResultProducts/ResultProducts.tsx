@@ -5,6 +5,7 @@ import styles from './ResultProducts.module.css';
 
 type ProductProps = {
   product: Product;
+  onClick?: () => void;
 };
 
 function ResultProducts({ product }: ProductProps): JSX.Element {

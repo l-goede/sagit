@@ -59,6 +59,10 @@
   margin-bottom: 0.25em;
   max-width: 80%;
   letter-spacing: 0;
+  overflow: scroll;
+}
+.resultProduct__description::-webkit-scrollbar {
+  display: none;
 }
 
 .resultProduct__price {
