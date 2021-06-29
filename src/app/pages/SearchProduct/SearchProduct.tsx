@@ -7,9 +7,10 @@ import useFetch from '../../components/hooks/useFetch';
 import type { Product } from '../../../types';
 
 function SearchProduct(): JSX.Element {
-  const [showPriceInput, setShowPriceInput] = useState<Product | null>(null);
   const [productName, setProductName] = useState<string>('');
   const products: Product[] = useFetch(`/api/search?product=${productName}`);
+  const [showPriceInput, setShowPriceInput] = useState<Product | null>(null);
+
   console.log(products);
 
   return (
@@ -23,15 +24,13 @@ function SearchProduct(): JSX.Element {
         />
       </header>
 
-      <div className={styles.modal}>
+      <main className={styles.main}>
         {showPriceInput && (
-          <div>
+          <div className={styles.modal}>
             {showPriceInput.title}{' '}
             <button onClick={() => setShowPriceInput(null)}>Close</button>
           </div>
         )}
-      </div>
-      <main className={styles.main}>
         <div className={styles.cards}>
           {products?.map((product: Product) => (
             <ResultProducts
