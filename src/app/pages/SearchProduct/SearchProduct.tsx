@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import styles from './SearchProduct.module.css';
 import useFetch from '../../components/hooks/useFetch';
 import type { Product } from '../../../types';
+import PriceInputField from '../../components/PriceInputField/PriceInputField';
 
 function SearchProduct(): JSX.Element {
   const [productName, setProductName] = useState<string>('');
@@ -27,8 +28,23 @@ function SearchProduct(): JSX.Element {
       <main className={styles.main}>
         {showPriceInput && (
           <div className={styles.modal}>
-            {showPriceInput.title}{' '}
-            <button onClick={() => setShowPriceInput(null)}>Close</button>
+            <div className={styles.modal__body}>
+              {showPriceInput.image}
+              {showPriceInput.title}
+              {showPriceInput.price}
+              <p>Zu teuer? Dann trage hier deinen Wunschpreis ein</p>
+              <PriceInputField
+                value=""
+                label="Dein Wunschpreis"
+                placeholder="Preis in €"
+              />
+              <button
+                onClick={() => {
+                  alert('Gespeichert');
+                  setShowPriceInput(null);
+                }}
+              ></button>
+            </div>
           </div>
         )}
         <div className={styles.cards}>

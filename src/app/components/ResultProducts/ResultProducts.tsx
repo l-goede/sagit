@@ -8,7 +8,7 @@ type ProductProps = {
   onClick?: () => void;
 };
 
-function ResultProducts({ product }: ProductProps): JSX.Element {
+function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
   async function postProduct() {
     const response = await fetch('/api/products', {
       method: 'POST',
@@ -26,7 +26,7 @@ function ResultProducts({ product }: ProductProps): JSX.Element {
     }
   }
   return (
-    <div className={styles.resultProduct}>
+    <div className={styles.resultProduct} onClick={onClick}>
       <img className={styles.resultProduct__img} src={product.image} />
 
       <div className={styles.resultProduct__card}>

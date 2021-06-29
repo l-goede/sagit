@@ -6,3 +6,9 @@ export type Product = {
   price: string;
   targetPrice?: string;
 };
+
+export type PriceInput = {
+  label: string;
+  value: string;
+  placeholder: string;
+};
