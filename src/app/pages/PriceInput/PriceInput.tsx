@@ -1,8 +1,9 @@
 import React from 'react';
 import SavePriceIcon from '../../components/Icons/SavePriceIcon';
 import { Product } from '../../../types';
-import styles from './Modal.module.css';
+import styles from './PriceInput.module.css';
 import PriceInputField from '../../components/PriceInputField/PriceInputField';
+import SelectedProduct from '../../components/SelectedProduct/SelectedProduct';
 
 type PriceInputProps = {
   product: Product;
@@ -27,6 +28,14 @@ function PriceInput({ product }: PriceInputProps): JSX.Element {
   }
   return (
     <div className={styles.container}>
+      <SelectedProduct
+        product={{
+          id: 'string',
+          image: 'string',
+          title: 'string',
+          price: 'string',
+        }}
+      />
       <div className={styles.container__input}>
         <PriceInputField
           label="Dein Wunschpreis"
