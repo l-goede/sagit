@@ -31,7 +31,10 @@ function ResultProducts({ product }: ProductProps): JSX.Element {
       <div className={styles.resultProduct__card}>
         <div className={styles.resultProduct__titleWrapper}>
           <p className={styles.resultProduct__title}>{product.title}</p>
-          <button onClick={() => postProduct()}>
+          <button
+            className={styles.resultProduct__icon}
+            onClick={() => postProduct()}
+          >
             <SaveIcon />
           </button>
         </div>
