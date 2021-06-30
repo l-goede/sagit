@@ -29,20 +29,30 @@
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.16);
 }
 
+.modal__closeModal {
+  background: none;
+  border: none;
+  display: flex;
+  align-self: flex-end;
+  padding: 1em 0.5em 0;
+}
+
+.modal__closeModal:hover {
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
+}
+
 .modal__text {
-  margin: 4em 3em 2em;
+  margin: 2em 3em 2em;
   font-size: 1.3em;
   color: var(--primary-color);
-  border-radius: 0.5em;
-  border-left: 0.01em solid var(--secondary-text-color);
-  border-right: 0.01em solid var(--secondary-text-color);
   text-align: center;
   line-height: 1.5em;
 }
 
 .modal__wrapperButton {
   position: fixed;
-  top: 75%;
+  top: 73%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

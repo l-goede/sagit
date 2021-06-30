@@ -6,6 +6,7 @@ import styles from './SearchProduct.module.css';
 import useFetch from '../../components/hooks/useFetch';
 import type { Product } from '../../../types';
 import PriceInputField from '../../components/PriceInputField/PriceInputField';
+import CloseModalIcon from '../../components/Icons/CloseModalIcon';
 
 function SearchProduct(): JSX.Element {
   const [productName, setProductName] = useState<string>('');
@@ -29,12 +30,17 @@ function SearchProduct(): JSX.Element {
         {showPriceInput && (
           <div className={styles.modal}>
             <div className={styles.modal__body}>
+              <button
+                className={styles.modal__closeModal}
+                onClick={() => setShowPriceInput(null)}
+              >
+                <CloseModalIcon />
+              </button>
               <div className={styles.modal__text}>
-                <p>Zu teuer? </p>
+                <p>ZU TEUER ?</p>
                 <p>
-                  Dann trage hier deinen Wunschpreis ein und du wirst
-                  benachrichtigt, sobald das Produkt zu diesem Preis verfügbar
-                  ist!
+                  Trage hier deinen Wunschpreis ein und du wirst benachrichtigt,
+                  sobald das Produkt zu diesem Preis verfügbar ist!
                 </p>
               </div>
 
