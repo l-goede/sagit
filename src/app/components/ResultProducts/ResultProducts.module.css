@@ -42,7 +42,6 @@
 
 .resultProduct__icon:hover {
   cursor: pointer;
-  color: black;
 }
 
 .resultProduct__title {
@@ -59,10 +58,9 @@
   margin-bottom: 0.25em;
   max-width: 80%;
   letter-spacing: 0;
-  overflow: scroll;
-}
-.resultProduct__description::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .resultProduct__price {

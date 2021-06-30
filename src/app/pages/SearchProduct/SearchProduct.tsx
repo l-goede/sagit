@@ -29,9 +29,15 @@ function SearchProduct(): JSX.Element {
         {showPriceInput && (
           <div className={styles.modal}>
             <div className={styles.modal__body}>
-              <p className={styles.modal__text}>
-                Zu teuer? Dann trage hier deinen Wunschpreis ein
-              </p>
+              <div className={styles.modal__text}>
+                <p>Zu teuer? </p>
+                <p>
+                  Dann trage hier deinen Wunschpreis ein und du wirst
+                  benachrichtigt, sobald das Produkt zu diesem Preis verfügbar
+                  ist!
+                </p>
+              </div>
+
               <PriceInputField
                 value=""
                 label="Dein Wunschpreis"

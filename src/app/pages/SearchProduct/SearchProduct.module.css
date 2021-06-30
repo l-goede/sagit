@@ -1,14 +1,12 @@
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 
 .modal {
   background: rgba(10, 10, 10, 0.3);
   color: rgb(134, 104, 53);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -19,23 +17,32 @@
 }
 
 .modal__body {
-  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 1);
   border-radius: 1em;
-  padding: 10em 0.2em;
-  margin: 0 1em;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.16);
 }
 
 .modal__text {
-  text-align: center;
-  padding-bottom: 2em;
+  margin: 4em 3em 2em;
   font-size: 1.3em;
-  color: var(--price-text-color);
+  color: var(--primary-color);
+  border-radius: 0.5em;
+  border-left: 0.01em solid var(--secondary-text-color);
+  border-right: 0.01em solid var(--secondary-text-color);
+  text-align: center;
+  line-height: 1.5em;
 }
 
 .modal__wrapperButton {
   position: fixed;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -46,11 +53,11 @@
   color: var(--secondary-text-color);
   font-size: 0.8em;
   background: white;
-  border-radius: 0.2em;
+  border-radius: 0.5em;
   display: block;
   text-decoration: none;
-  border-top: 0.1em solid var(--secondary-text-color);
-  border-bottom: 0.1em solid var(--secondary-text-color);
+  border-top: 0.15em solid var(--secondary-text-color);
+  border-bottom: 0.15em solid var(--secondary-text-color);
   border-left: none;
   border-right: none;
   letter-spacing: 0.2em;
