@@ -70,7 +70,6 @@ async function searchProducts(name: string) {
       description: description,
       price: price,
     });
-    console.log(image);
   });
   return products;
 }

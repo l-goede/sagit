@@ -43,8 +43,8 @@
 }
 
 .modal__text {
-  margin: 2em 3em 2em;
-  font-size: 1.3em;
+  margin: 1em 3em 2em;
+  font-size: 1.1em;
   color: var(--primary-color);
   text-align: center;
   line-height: 1.5em;
@@ -52,7 +52,7 @@
 
 .modal__wrapperButton {
   position: fixed;
-  top: 73%;
+  top: 71%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
