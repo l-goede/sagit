@@ -29,16 +29,22 @@ function SearchProduct(): JSX.Element {
         {showPriceInput && (
           <div className={styles.modal}>
             <div className={styles.modal__body}>
-              {showPriceInput.image}
-              {showPriceInput.title}
-              {showPriceInput.price}
-              <p>Zu teuer? Dann trage hier deinen Wunschpreis ein</p>
+              <div className={styles.modal__productInfo}>
+                {showPriceInput.image}
+
+                {showPriceInput.title}
+                {showPriceInput.price}
+              </div>
+              <p className={styles.modal__text}>
+                Zu teuer? Dann trage hier deinen Wunschpreis ein
+              </p>
               <PriceInputField
                 value=""
                 label="Dein Wunschpreis"
                 placeholder="Preis in €"
               />
               <button
+                className={styles.modal__saveButton}
                 onClick={() => {
                   alert('Gespeichert');
                   setShowPriceInput(null);

@@ -16,14 +16,28 @@
   z-index: 1;
   display: grid;
   place-items: center;
-  padding: 1em;
 }
 
 .modal__body {
   background: white;
   border-radius: 1em;
-  padding: 10em 1em;
+  padding: 10em 0.2em;
+  margin: 0 1em;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.16);
+}
+.modal__imgWrapper {
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.modal__text {
+  text-align: center;
+  padding-bottom: 2em;
+  font-size: 1.3em;
+  color: var(--price-text-color);
 }
 
 .header {
