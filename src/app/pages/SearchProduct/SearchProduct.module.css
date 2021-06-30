@@ -25,19 +25,41 @@
   margin: 0 1em;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.16);
 }
-.modal__imgWrapper {
-  border-bottom-left-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-  height: 100%;
-  width: 100%;
-  object-fit: scale-down;
-}
 
 .modal__text {
   text-align: center;
   padding-bottom: 2em;
   font-size: 1.3em;
   color: var(--price-text-color);
+}
+
+.modal__wrapperButton {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__saveButton {
+  padding: 1em;
+  font-family: var(--primdary-font);
+  color: var(--secondary-text-color);
+  font-size: 0.8em;
+  background: white;
+  border-radius: 0.2em;
+  display: block;
+  text-decoration: none;
+  border-top: 0.1em solid var(--secondary-text-color);
+  border-bottom: 0.1em solid var(--secondary-text-color);
+  border-left: none;
+  border-right: none;
+  letter-spacing: 0.2em;
+  transition: all 0.25s;
+}
+
+.modal__saveButton:hover {
+  letter-spacing: 0.8em;
+  cursor: pointer;
 }
 
 .header {

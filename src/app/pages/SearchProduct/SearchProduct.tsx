@@ -29,12 +29,6 @@ function SearchProduct(): JSX.Element {
         {showPriceInput && (
           <div className={styles.modal}>
             <div className={styles.modal__body}>
-              <div className={styles.modal__productInfo}>
-                {showPriceInput.image}
-
-                {showPriceInput.title}
-                {showPriceInput.price}
-              </div>
               <p className={styles.modal__text}>
                 Zu teuer? Dann trage hier deinen Wunschpreis ein
               </p>
@@ -43,13 +37,17 @@ function SearchProduct(): JSX.Element {
                 label="Dein Wunschpreis"
                 placeholder="Preis in €"
               />
-              <button
-                className={styles.modal__saveButton}
-                onClick={() => {
-                  alert('Gespeichert');
-                  setShowPriceInput(null);
-                }}
-              ></button>
+              <div className={styles.modal__wrapperButton}>
+                <button
+                  className={styles.modal__saveButton}
+                  onClick={() => {
+                    alert('Dein Wunschpreis wurde erfolgreich gespeichert!');
+                    setShowPriceInput(null);
+                  }}
+                >
+                  Speichern
+                </button>
+              </div>
             </div>
           </div>
         )}
