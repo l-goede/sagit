@@ -11,7 +11,29 @@ import CloseModalIcon from '../../components/Icons/CloseModalIcon';
 function SearchProduct(): JSX.Element {
   const [productName, setProductName] = useState<string>('');
   const products: Product[] = useFetch(`/api/search?product=${productName}`);
+  const [targetPrice, setTargetPrice] = useState<string>('');
   const [showPriceInput, setShowPriceInput] = useState<Product | null>(null);
+
+  async function postTargetPrice() {
+    const response = await fetch('/api/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        targetPrice,
+      }),
+    });
+    if (!response.ok) {
+      const errorMessage = await response.text();
+      throw errorMessage;
+    }
+  }
+  function handleClick() {
+    postTargetPrice;
+    setTargetPrice;
+    setShowPriceInput(null);
+  }
 
   console.log(products);
 
@@ -45,16 +67,18 @@ function SearchProduct(): JSX.Element {
               </div>
 
               <PriceInputField
-                value=""
                 label="Dein Wunschpreis"
+                value={targetPrice}
                 placeholder="Preis in €"
               />
               <div className={styles.modal__wrapperButton}>
                 <button
                   className={styles.modal__saveButton}
                   onClick={() => {
+                    {
+                      handleClick;
+                    }
                     alert('Dein Wunschpreis wurde erfolgreich gespeichert!');
-                    setShowPriceInput(null);
                   }}
                 >
                   Speichern

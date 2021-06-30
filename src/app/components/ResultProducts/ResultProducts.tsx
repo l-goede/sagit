@@ -17,7 +17,6 @@ function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
       },
       body: JSON.stringify({
         ...product,
-        targetPrice: '200 €',
       }),
     });
     if (!response.ok) {
@@ -28,7 +27,6 @@ function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
   return (
     <div className={styles.resultProduct} onClick={onClick}>
       <img className={styles.resultProduct__img} src={product.image} />
-
       <div className={styles.resultProduct__card}>
         <div className={styles.resultProduct__titleWrapper}>
           <p className={styles.resultProduct__title}>{product.title}</p>
