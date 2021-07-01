@@ -18,6 +18,6 @@ export const getCollection = <T>(name: string): Collection<T> => {
   return client.db().collection<T>(name);
 };
 
-export const getProductDataCollection = (): Collection<WatchlistItem> => {
+export const getWatchlistCollection = (): Collection<WatchlistItem> => {
   return getCollection<WatchlistItem>('watchlistItems');
 };

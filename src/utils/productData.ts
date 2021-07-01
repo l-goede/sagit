@@ -1,16 +1,16 @@
 import type { WatchlistItem } from '../types';
-import { getProductDataCollection } from './database';
+import { getWatchlistCollection } from './database';
 
-export const readProductData = async (): Promise<WatchlistItem[]> => {
-  return await getProductDataCollection().find().toArray();
+export const readWatchlist = async (): Promise<WatchlistItem[]> => {
+  return await getWatchlistCollection().find().toArray();
 };
 
-export const saveProductData = async (
+export const saveWatchlist = async (
   productId: string,
   price: string,
   targetPrice: number
 ): Promise<void> => {
-  await getProductDataCollection().insertOne({
+  await getWatchlistCollection().insertOne({
     productId,
     price,
     targetPrice,

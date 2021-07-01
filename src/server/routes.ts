@@ -1,18 +1,18 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
-import { readProductData, saveProductData } from '../utils/productData';
+import { readWatchlist, saveWatchlist } from '../utils/productData';
 
 const router = express.Router();
 
 router.get('/products', async (_request, response) => {
-  const products = await readProductData();
+  const products = await readWatchlist();
   response.json(products);
 });
 
 router.post('/products', async (request, response) => {
   const { productId, price, targetPrice } = request.body;
-  await saveProductData(productId, price, targetPrice);
+  await saveWatchlist(productId, price, targetPrice);
   response.send('Product saved in db');
 });
 
