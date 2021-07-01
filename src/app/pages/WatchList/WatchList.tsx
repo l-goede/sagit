@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import useFetch from '../../components/hooks/useFetch';
 import ResultProducts from '../../components/ResultProducts/ResultProducts';
 import WatchListHeader from '../../components/WatchList/WatchListHeader';
-import styles from './WatchList.module.css';
+import styles from '../../components/ResultProducts/ResultProducts.module.css';
 
 function WatchList(): JSX.Element {
   const products: Product[] = useFetch('/api/products');

@@ -33,12 +33,14 @@
   justify-content: space-between;
   align-items: center;
 }
-button {
-  border: none;
+
+.resultProduct__icon {
+  color: var(--secondary-text-color);
   background: none;
+  border: none;
 }
 
-button:hover {
+.resultProduct__icon:hover {
   cursor: pointer;
 }
 
@@ -56,6 +58,9 @@ button:hover {
   margin-bottom: 0.25em;
   max-width: 80%;
   letter-spacing: 0;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .resultProduct__price {

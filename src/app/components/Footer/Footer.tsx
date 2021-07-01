@@ -8,9 +8,9 @@ import styles from './Footer.module.css';
 function Footer(): JSX.Element {
   return (
     <div className={styles.footer}>
-      <NavBarLink icon={<SearchIcon />} link="/" />
+      <NavBarLink icon={<SearchIcon />} link="/search" />
       <NavBarLink icon={<NotificationIcon />} link="#" />
-      <NavBarLink icon={<WatchListIcon />} link="#" />
+      <NavBarLink icon={<WatchListIcon />} link="/watchlist" />
     </div>
   );
 }

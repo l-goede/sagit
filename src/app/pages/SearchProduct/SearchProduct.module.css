@@ -1,8 +1,82 @@
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
+}
+
+.modal {
+  background: rgba(10, 10, 10, 0.3);
+  color: rgb(134, 104, 53);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+}
+
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 1em;
+  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.16);
+}
+
+.modal__closeModal {
+  background: none;
+  border: none;
+  display: flex;
+  align-self: flex-end;
+  padding: 1em 0.5em 0;
+}
+
+.modal__closeModal:hover {
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
+}
+
+.modal__text {
+  margin: 1em 3em 2em;
+  font-size: 1.1em;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.modal__wrapperButton {
+  position: fixed;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__saveButton {
+  padding: 1em;
+  font-family: var(--primdary-font);
+  color: var(--secondary-text-color);
+  font-size: 0.8em;
+  background: white;
+  border-radius: 0.5em;
+  display: block;
+  text-decoration: none;
+  border-top: 0.15em solid var(--secondary-text-color);
+  border-bottom: 0.15em solid var(--secondary-text-color);
+  border-left: none;
+  border-right: none;
+  letter-spacing: 0.2em;
+  transition: all 0.25s;
+}
+
+.modal__saveButton:hover {
+  letter-spacing: 0.8em;
+  cursor: pointer;
 }
 
 .header {
