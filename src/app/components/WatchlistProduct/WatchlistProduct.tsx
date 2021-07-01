@@ -3,9 +3,14 @@ import { Product } from '../../../types';
 import SavedIcon from '../Icons/SavedIcon';
 import styles from './WatchlistProduct.module.css';
 
-function WatchlistProduct({ ...product }: Product): JSX.Element {
+type ProductProps = {
+  product: Product;
+  onClick?: () => void;
+};
+
+function WatchlistProduct({ product, onClick }: ProductProps): JSX.Element {
   return (
-    <div className={styles.watchlistProduct}>
+    <div className={styles.watchlistProduct} onClick={onClick}>
       <img className={styles.watchlistProduct__img} src={product.image} />
       <div className={styles.watchlistProduct__card}>
         <div className={styles.watchlistProduct__titleWrapper}>

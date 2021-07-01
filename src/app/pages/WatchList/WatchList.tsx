@@ -2,11 +2,11 @@ import React from 'react';
 import { Product } from '../../../types';
 import Footer from '../../components/Footer/Footer';
 import useFetch from '../../components/hooks/useFetch';
-import ResultProducts from '../../components/ResultProducts/ResultProducts';
 import WatchListHeader from '../../components/WatchList/WatchListHeader';
 import styles from '../../components/ResultProducts/ResultProducts.module.css';
 import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
 import DroppedPriceProduct from '../../components/StaticWatchlistProducts/DroppedPriceProduct';
+import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct';
 
 function WatchList(): JSX.Element {
   const products: Product[] = useFetch('/api/products');
@@ -19,7 +19,7 @@ function WatchList(): JSX.Element {
         <div className={styles.cards}>
           {products &&
             products.map((product: Product) => (
-              <ResultProducts key={product.id} product={product} />
+              <WatchlistProduct key={product.title} product={product} />
             ))}
         </div>
       </main>
