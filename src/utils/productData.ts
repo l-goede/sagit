@@ -1,7 +1,7 @@
-import type { WishlistItem } from '../types';
+import type { WatchlistItem } from '../types';
 import { getProductDataCollection } from './database';
 
-export const readProductData = async (): Promise<WishlistItem[]> => {
+export const readProductData = async (): Promise<WatchlistItem[]> => {
   return await getProductDataCollection().find().toArray();
 };
 

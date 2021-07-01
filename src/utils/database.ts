@@ -1,5 +1,5 @@
 import { Collection, MongoClient } from 'mongodb';
-import { WishlistItem } from '../types';
+import { WatchlistItem } from '../types';
 
 let client: MongoClient;
 
@@ -18,6 +18,6 @@ export const getCollection = <T>(name: string): Collection<T> => {
   return client.db().collection<T>(name);
 };
 
-export const getProductDataCollection = (): Collection<WishlistItem> => {
-  return getCollection<WishlistItem>('wishlistItems');
+export const getProductDataCollection = (): Collection<WatchlistItem> => {
+  return getCollection<WatchlistItem>('watchlistItems');
 };

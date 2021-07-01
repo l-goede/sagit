@@ -13,7 +13,7 @@ export type PriceInput = {
   placeholder: string;
 };
 
-export type WishlistItem = {
+export type WatchlistItem = {
   productId: string;
   price: string;
   targetPrice: number;
