@@ -9,31 +9,13 @@ type ProductProps = {
 };
 
 function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
-  async function postProduct() {
-    const response = await fetch('/api/products', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ...product,
-      }),
-    });
-    if (!response.ok) {
-      const errorMessage = await response.text();
-      throw errorMessage;
-    }
-  }
   return (
     <div className={styles.resultProduct} onClick={onClick}>
       <img className={styles.resultProduct__img} src={product.image} />
       <div className={styles.resultProduct__card}>
         <div className={styles.resultProduct__titleWrapper}>
           <p className={styles.resultProduct__title}>{product.title}</p>
-          <button
-            className={styles.resultProduct__icon}
-            onClick={() => postProduct()}
-          >
+          <button className={styles.resultProduct__icon}>
             <SaveIcon />
           </button>
         </div>
