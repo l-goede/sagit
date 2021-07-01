@@ -5,6 +5,7 @@ import useFetch from '../../components/hooks/useFetch';
 import ResultProducts from '../../components/ResultProducts/ResultProducts';
 import WatchListHeader from '../../components/WatchList/WatchListHeader';
 import styles from '../../components/ResultProducts/ResultProducts.module.css';
+import StaticWatchlistProduct from '../../components/StaticWatchlistProduct/StaticWatchlistProduct';
 
 function WatchList(): JSX.Element {
   const products: Product[] = useFetch('/api/products');
@@ -18,6 +19,7 @@ function WatchList(): JSX.Element {
               <ResultProducts key={product.id} product={product} />
             ))}
         </div>
+        <StaticWatchlistProduct />
       </main>
       <footer>
         <Footer />
