@@ -1,12 +1,18 @@
-import type { Product } from '../types';
+import type { WishlistItem } from '../types';
 import { getProductDataCollection } from './database';
 
-export const readProductData = async (): Promise<Product[]> => {
+export const readProductData = async (): Promise<WishlistItem[]> => {
   return await getProductDataCollection().find().toArray();
 };
 
-export const saveProductData = async (product: Product): Promise<void> => {
+export const saveProductData = async (
+  productId: string,
+  price: string,
+  targetPrice: number
+): Promise<void> => {
   await getProductDataCollection().insertOne({
-    ...product,
+    productId,
+    price,
+    targetPrice,
   });
 };

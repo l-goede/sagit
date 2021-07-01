@@ -3,14 +3,16 @@ import styles from './PriceInputField.module.css';
 
 type PriceInputProps = {
   label: string;
-  value: string;
+  value: number;
   placeholder: string;
+  onChange: (value: number) => void;
 };
 
 function PriceInputField({
   label,
   value,
   placeholder,
+  onChange,
 }: PriceInputProps): JSX.Element {
   return (
     <div className={styles.container}>
@@ -19,7 +21,9 @@ function PriceInputField({
         <input
           className={styles.container__input}
           value={value}
+          type="number"
           placeholder={placeholder}
+          onChange={(event) => onChange(+event.target.value)}
         />
       </label>
     </div>

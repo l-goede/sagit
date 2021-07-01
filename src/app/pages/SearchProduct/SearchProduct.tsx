@@ -8,34 +8,40 @@ import type { Product } from '../../../types';
 import PriceInputField from '../../components/PriceInputField/PriceInputField';
 import CloseModalIcon from '../../components/Icons/CloseModalIcon';
 
+async function postTargetPrice(
+  productId: string,
+  price: string,
+  targetPrice: number
+) {
+  const response = await fetch('/api/products', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      productId,
+      price,
+      targetPrice,
+    }),
+  });
+  if (!response.ok) {
+    const errorMessage = await response.text();
+    throw errorMessage;
+  }
+}
+
 function SearchProduct(): JSX.Element {
   const [productName, setProductName] = useState<string>('');
   const products: Product[] = useFetch(`/api/search?product=${productName}`);
-  const [targetPrice, setTargetPrice] = useState<string>('');
-  const [showPriceInput, setShowPriceInput] = useState<Product | null>(null);
+  const [targetPrice, setTargetPrice] = useState<number>(0);
+  const [targetProduct, setTargetProduct] = useState<Product | null>(null);
 
-  async function postTargetPrice() {
-    const response = await fetch('/api/products', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        targetPrice,
-      }),
-    });
-    if (!response.ok) {
-      const errorMessage = await response.text();
-      throw errorMessage;
+  async function handleSaveTargetPrice() {
+    if (targetProduct) {
+      await postTargetPrice(targetProduct.id, targetProduct.price, targetPrice);
+      setTargetProduct(null);
     }
   }
-  function handleClick() {
-    postTargetPrice;
-    setTargetPrice;
-    setShowPriceInput(null);
-  }
-
-  console.log(products);
 
   return (
     <div className={styles.container}>
@@ -49,12 +55,12 @@ function SearchProduct(): JSX.Element {
       </header>
 
       <main className={styles.main}>
-        {showPriceInput && (
+        {targetProduct && (
           <div className={styles.modal}>
             <div className={styles.modal__body}>
               <button
                 className={styles.modal__closeModal}
-                onClick={() => setShowPriceInput(null)}
+                onClick={() => setTargetProduct(null)}
               >
                 <CloseModalIcon />
               </button>
@@ -69,17 +75,13 @@ function SearchProduct(): JSX.Element {
               <PriceInputField
                 label="Dein Wunschpreis"
                 value={targetPrice}
+                onChange={setTargetPrice}
                 placeholder="Preis in €"
               />
               <div className={styles.modal__wrapperButton}>
                 <button
                   className={styles.modal__saveButton}
-                  onClick={() => {
-                    {
-                      handleClick;
-                    }
-                    alert('Dein Wunschpreis wurde erfolgreich gespeichert!');
-                  }}
+                  onClick={handleSaveTargetPrice}
                 >
                   Speichern
                 </button>
@@ -92,7 +94,7 @@ function SearchProduct(): JSX.Element {
             <ResultProducts
               key={product.id}
               product={product}
-              onClick={() => setShowPriceInput(product)}
+              onClick={() => setTargetProduct(product)}
             />
           ))}
         </div>

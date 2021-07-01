@@ -11,7 +11,8 @@ router.get('/products', async (_request, response) => {
 });
 
 router.post('/products', async (request, response) => {
-  await saveProductData(request.body);
+  const { productId, price, targetPrice } = request.body;
+  await saveProductData(productId, price, targetPrice);
   response.send('Product saved in db');
 });
 
@@ -48,7 +49,7 @@ async function searchProducts(name: string) {
     description: string;
     price: string;
   }[] = [];
-  offerListItems.each((i, offerListItem) => {
+  offerListItems.each((_, offerListItem) => {
     const image = $(offerListItem).find('.offerList-item-image').attr('src');
     const title = $(offerListItem)
       .find('.offerList-item-description-title')
@@ -64,7 +65,7 @@ async function searchProducts(name: string) {
       .replace('\n', '')
       .trim();
     products.push({
-      id: i.toString(),
+      id: title,
       image: image || '',
       title: title,
       description: description,

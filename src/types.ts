@@ -4,11 +4,17 @@ export type Product = {
   title: string;
   description?: string;
   price: string;
-  targetPrice?: string;
+  targetPrice?: number;
 };
 
 export type PriceInput = {
   label: string;
   value: string;
   placeholder: string;
+};
+
+export type WishlistItem = {
+  productId: string;
+  price: string;
+  targetPrice: number;
 };
