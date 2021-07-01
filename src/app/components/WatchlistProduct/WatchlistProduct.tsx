@@ -1,7 +1,7 @@
 import React from 'react';
 import { Product } from '../../../types';
-import SavedIcon from '../Icons/SaveIcon';
-import styles from './ResultProducts.module.css';
+import SavedIcon from '../Icons/SavedIcon';
+import styles from './WatchlistProduct.module.css';
 
 function WatchlistProduct({ ...product }: Product): JSX.Element {
   return (
@@ -21,7 +21,7 @@ function WatchlistProduct({ ...product }: Product): JSX.Element {
           Aktueller Preis: {product.price}
         </p>
         {product.targetPrice && (
-          <p className={styles.watchlistProduct__price}>
+          <p className={styles.watchlistProduct__targetPrice}>
             Wunschpreis: {product.targetPrice} €
           </p>
         )}
