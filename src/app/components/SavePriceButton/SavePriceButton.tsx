@@ -7,13 +7,6 @@ type SavePriceButtonProps = {
   onClick?: () => void;
 };
 
-// function SavePriceButton({
-//   children,
-//   onClick,
-// }: SavePriceButtonProps): JSX.Element {
-//   return <button className={styles.saveButton} onClick>{children}</button>;
-// }
-
 export default SavePriceButton;
 
 function SavePriceButton({

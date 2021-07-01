@@ -25,7 +25,7 @@ function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
         <p className={styles.resultProduct__price}>{product.price}</p>
         {product.targetPrice && (
           <p className={styles.resultProduct__price}>
-            Wunschpreis: {product.targetPrice}
+            Wunschpreis: {product.targetPrice} €
           </p>
         )}
       </div>
