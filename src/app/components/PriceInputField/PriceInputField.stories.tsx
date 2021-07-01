@@ -7,5 +7,10 @@ export default {
 };
 
 export const PriceInput = (): JSX.Element => (
-  <PriceInputField label="Dein Wunschpreis" value="" placeholder="Zielpreis" />
+  <PriceInputField
+    label="Dein Wunschpreis"
+    value={0}
+    placeholder="Zielpreis"
+    onChange={console.log}
+  />
 );

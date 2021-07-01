@@ -11,7 +11,7 @@ import CloseModalIcon from '../../components/Icons/CloseModalIcon';
 async function postTargetPrice(
   productId: string,
   price: string,
-  targetPrice: number
+  targetPrice: number | ''
 ) {
   const response = await fetch('/api/products', {
     method: 'POST',
@@ -33,7 +33,7 @@ async function postTargetPrice(
 function SearchProduct(): JSX.Element {
   const [productName, setProductName] = useState<string>('');
   const products: Product[] = useFetch(`/api/search?product=${productName}`);
-  const [targetPrice, setTargetPrice] = useState<number>(0);
+  const [targetPrice, setTargetPrice] = useState<number | ''>('');
   const [targetProduct, setTargetProduct] = useState<Product | null>(null);
 
   async function handleSaveTargetPrice() {
