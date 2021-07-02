@@ -10,18 +10,16 @@ type ProductProps = {
 
 function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
   return (
-    <div className={styles.resultProduct} onClick={onClick}>
-      <img className={styles.resultProduct__img} src={product.image} />
-      <div className={styles.resultProduct__card}>
-        <div className={styles.resultProduct__titleWrapper}>
-          <p className={styles.resultProduct__title}>{product.title}</p>
-          <button className={styles.resultProduct__icon}>
-            <SaveIcon />
-          </button>
-        </div>
-        <p className={styles.resultProduct__description}>
+    <article className={styles.resultProduct} onClick={onClick}>
+      <div className={styles.resultProduct__imgWrapper}>
+        <img className={styles.resultProduct__img} src={product.image} />
+      </div>
+      <div className={styles.resultProduct__text}>
+        <p className={styles.resultProduct__title}>{product.title}</p>
+
+        <span className={styles.resultProduct__description}>
           {product.description}
-        </p>
+        </span>
         <p className={styles.resultProduct__price}>{product.price}</p>
         {product.targetPrice && (
           <p className={styles.resultProduct__price}>
@@ -29,7 +27,10 @@ function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
           </p>
         )}
       </div>
-    </div>
+      <button className={styles.resultProduct__icon}>
+        <SaveIcon />
+      </button>
+    </article>
   );
 }
 
