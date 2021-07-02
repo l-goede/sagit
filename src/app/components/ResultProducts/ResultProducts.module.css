@@ -62,7 +62,6 @@
   max-width: 80%;
   letter-spacing: 0;
   overflow: hidden;
-  z-index: -1;
 }
 
 .resultProduct__price {
