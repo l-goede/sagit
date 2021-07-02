@@ -9,7 +9,7 @@ function BackButtonIcon(): JSX.Element {
           x2="10"
           transform="translate(27.5 71.5)"
           fill="none"
-          stroke="#866835"
+          stroke="var(--secondary-text-color)"
           stroke-linecap="round"
           stroke-width="2"
         />

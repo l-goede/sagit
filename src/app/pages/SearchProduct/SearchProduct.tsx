@@ -8,19 +8,14 @@ import type { Product } from '../../../types';
 import PriceInputField from '../../components/PriceInputField/PriceInputField';
 import CloseModalIcon from '../../components/Icons/CloseModalIcon';
 
-async function postTargetPrice(
-  productId: string,
-  price: string,
-  targetPrice: number | ''
-) {
+async function postTargetPrice(product: Product, targetPrice: number | '') {
   const response = await fetch('/api/products', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      productId,
-      price,
+      ...product,
       targetPrice,
     }),
   });
@@ -38,7 +33,7 @@ function SearchProduct(): JSX.Element {
 
   async function handleSaveTargetPrice() {
     if (targetProduct) {
-      await postTargetPrice(targetProduct.id, targetProduct.price, targetPrice);
+      await postTargetPrice(targetProduct, targetPrice);
       setTargetProduct(null);
     }
   }

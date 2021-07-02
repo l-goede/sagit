@@ -14,7 +14,6 @@ export type PriceInput = {
 };
 
 export type WatchlistItem = {
-  productId: string;
-  price: string;
+  product: Product;
   targetPrice: number;
 };
