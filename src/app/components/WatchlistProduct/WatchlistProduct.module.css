@@ -7,12 +7,13 @@
   height: 9em;
   width: 80%;
   max-width: 25em;
-  transition: all ease-in-out 150ms;
+  grid-row-gap: 1em;
+  margin-top: 1em;
 }
+
 .watchlistProduct:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: all ease-in-out 150ms;
 }
 
 .watchlistProduct__img {

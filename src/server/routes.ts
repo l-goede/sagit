@@ -11,8 +11,8 @@ router.get('/products', async (_request, response) => {
 });
 
 router.post('/products', async (request, response) => {
-  const { productId, price, targetPrice } = request.body;
-  await saveWatchlist(productId, price, targetPrice);
+  const { product, targetPrice } = request.body;
+  await saveWatchlist(product, targetPrice);
   response.send('Product saved in db');
 });
 

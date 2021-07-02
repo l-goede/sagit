@@ -1,4 +1,4 @@
-import type { WatchlistItem } from '../types';
+import type { Product, WatchlistItem } from '../types';
 import { getWatchlistCollection } from './database';
 
 export const readWatchlist = async (): Promise<WatchlistItem[]> => {
@@ -6,13 +6,11 @@ export const readWatchlist = async (): Promise<WatchlistItem[]> => {
 };
 
 export const saveWatchlist = async (
-  productId: string,
-  price: string,
+  product: Product,
   targetPrice: number
 ): Promise<void> => {
   await getWatchlistCollection().insertOne({
-    productId,
-    price,
+    product,
     targetPrice,
   });
 };

@@ -10,6 +10,8 @@ import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct
 
 function WatchList(): JSX.Element {
   const products: Product[] = useFetch('/api/products');
+  console.log(products);
+
   return (
     <div className={styles.container}>
       <WatchListHeader headline="Deine Merkliste" />
@@ -19,7 +21,7 @@ function WatchList(): JSX.Element {
         <div className={styles.cards}>
           {products &&
             products.map((product: Product) => (
-              <WatchlistProduct key={product.title} product={product} />
+              <WatchlistProduct key={product.id} product={product} />
             ))}
         </div>
       </main>

@@ -7,6 +7,8 @@
   height: 9em;
   width: 80%;
   max-width: 25em;
+  grid-row-gap: 1em;
+  margin-top: 1em;
 }
 .staticWatchlistProduct:hover {
   cursor: pointer;

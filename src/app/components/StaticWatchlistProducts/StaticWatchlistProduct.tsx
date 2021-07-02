@@ -7,26 +7,26 @@ function StaticWatchlistProduct(): JSX.Element {
     <div className={styles.staticWatchlistProduct}>
       <img
         className={styles.staticWatchlistProduct__img}
-        src="https://cdn.idealo.com/folder/Product/6837/6/6837655/s1_produktbild_max/apple-airpods-pro.jpg"
+        src="https://cdn.idealo.com/folder/Product/6503/2/6503294/s1_produktbild_max/bang-olufsen-beoplay-e8-2-0-black.jpg"
       />
       <div className={styles.staticWatchlistProduct__card}>
         <div className={styles.staticWatchlistProduct__titleWrapper}>
           <p className={styles.staticWatchlistProduct__title}>
-            Apple AirPods Pro
+            Bang & Olufsen BeoPlay E8
           </p>
           <button className={styles.staticWatchlistProduct__icon}>
             <SavedIcon />
           </button>
         </div>
         <p className={styles.staticWatchlistProduct__description}>
-          Noise-Cancelling-Kopfhörer im Ohr sitzend kabellos Apple Siri
-          Bluetooth 5.0 5 h Betriebszeit
+          Bluetooth-Kopfhörer im Ohr sitzend kabellos Bluetooth 4.2 Frequenzgang
+          20 - 20.000 Hz
         </p>
         <p className={styles.staticWatchlistProduct__price}>
-          Aktueller Preis: ab 120 €
+          Aktueller Preis: ab 81,95 €
         </p>
         <p className={styles.staticWatchlistProduct__targetPrice}>
-          Wunschpreis: 127 €
+          Wunschpreis: 70 €
         </p>
       </div>
     </div>
