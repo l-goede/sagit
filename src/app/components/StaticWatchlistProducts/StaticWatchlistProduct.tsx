@@ -1,5 +1,6 @@
 import React from 'react';
 import SavedIcon from '../Icons/SavedIcon';
+import ShopLink from '../ShopLink/ShopLink';
 import styles from './StaticWatchlistProduct.module.css';
 
 function StaticWatchlistProduct(): JSX.Element {
@@ -25,9 +26,14 @@ function StaticWatchlistProduct(): JSX.Element {
         <p className={styles.staticWatchlistProduct__price}>
           Aktueller Preis: ab 81,95 €
         </p>
-        <p className={styles.staticWatchlistProduct__targetPrice}>
-          Wunschpreis: 70 €
-        </p>
+        <div className={styles.staticwatchlistProduct__targetPriceWrapper}>
+          <p className={styles.staticWatchlistProduct__targetPrice}>
+            Wunschpreis: 70 €
+          </p>
+          <button className={styles.staticwatchlistProduct__shoplink}>
+            <ShopLink />
+          </button>
+        </div>
       </div>
     </div>
   );

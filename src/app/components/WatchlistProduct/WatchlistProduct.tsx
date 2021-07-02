@@ -25,20 +25,24 @@ function WatchlistProduct({
             <SavedIcon />
           </button>
         </div>
+
         <p className={styles.watchlistProduct__description}>
           {product.description}
         </p>
-        <button>
-          <ShopLink />
-        </button>
+
         <p className={styles.watchlistProduct__price}>
           Aktueller Preis: {product.price}
         </p>
-        {targetPrice && (
-          <p className={styles.watchlistProduct__targetPrice}>
-            Wunschpreis: {targetPrice} €
-          </p>
-        )}
+        <div className={styles.watchlistProduct__targetPriceWrapper}>
+          {targetPrice && (
+            <p className={styles.watchlistProduct__targetPrice}>
+              Wunschpreis: {targetPrice} €
+            </p>
+          )}
+          <button className={styles.watchlistProduct__shoplink}>
+            <ShopLink />
+          </button>
+        </div>
       </div>
     </div>
   );

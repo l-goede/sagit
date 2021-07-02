@@ -67,9 +67,18 @@
   font-size: 0.9em;
   margin: 0.25em 0;
 }
-
+.staticwatchlistProduct__targetPriceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .staticWatchlistProduct__targetPrice {
   color: var(--price-text-color);
   font-size: 0.9em;
   margin: 0.25em 0;
+}
+
+.staticwatchlistProduct__shoplink {
+  background: none;
+  border: none;
 }

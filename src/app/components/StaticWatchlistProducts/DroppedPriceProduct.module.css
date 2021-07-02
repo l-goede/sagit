@@ -67,8 +67,19 @@
   margin: 0.25em 0;
 }
 
+.droppedPriceProduct__targetPriceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .droppedPriceProduct__targetPrice {
   color: var(--price-text-color);
   font-size: 0.9em;
   margin: 0.25em 0;
+}
+
+.droppedPriceProduct__shoplink {
+  background: none;
+  border: none;
 }
