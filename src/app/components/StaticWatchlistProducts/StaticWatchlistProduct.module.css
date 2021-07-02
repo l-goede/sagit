@@ -37,6 +37,8 @@
   color: var(--secondary-text-color);
   background: none;
   border: none;
+  display: flex;
+  flex-direction: row;
 }
 
 .staticWatchlistProduct__icon:hover {
@@ -55,10 +57,11 @@
   font-size: 0.8em;
   margin-top: 0;
   margin-bottom: 0.25em;
+  width: 100%;
   max-width: 80%;
   letter-spacing: 0;
+  white-space: nowrap;
   overflow: hidden;
-  width: 100%;
   text-overflow: ellipsis;
 }
 

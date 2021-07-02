@@ -11,15 +11,12 @@ type ProductProps = {
 function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
   return (
     <article className={styles.resultProduct} onClick={onClick}>
-      <div className={styles.resultProduct__imgWrapper}>
-        <img className={styles.resultProduct__img} src={product.image} />
-      </div>
+      <img className={styles.resultProduct__img} src={product.image} />
       <div className={styles.resultProduct__text}>
         <p className={styles.resultProduct__title}>{product.title}</p>
-
-        <span className={styles.resultProduct__description}>
+        <p className={styles.resultProduct__description}>
           {product.description}
-        </span>
+        </p>
         <p className={styles.resultProduct__price}>{product.price}</p>
         {product.targetPrice && (
           <p className={styles.resultProduct__price}>

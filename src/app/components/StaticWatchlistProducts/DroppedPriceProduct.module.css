@@ -56,9 +56,7 @@
   margin-bottom: 0.25em;
   max-width: 80%;
   letter-spacing: 0;
-  overflow: hidden;
   width: 100%;
-  text-overflow: ellipsis;
 }
 
 .droppedPriceProduct__price {

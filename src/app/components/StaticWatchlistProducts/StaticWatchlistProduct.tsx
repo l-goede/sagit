@@ -23,9 +23,7 @@ function StaticWatchlistProduct(): JSX.Element {
           Bluetooth-Kopfhörer im Ohr sitzend kabellos Bluetooth 4.2 Frequenzgang
           20 - 20.000 Hz
         </p>
-        <p className={styles.staticWatchlistProduct__price}>
-          Aktueller Preis: ab 81,95 €
-        </p>
+        <p className={styles.staticWatchlistProduct__price}>ab 81,95 €</p>
         <div className={styles.staticwatchlistProduct__targetPriceWrapper}>
           <p className={styles.staticWatchlistProduct__targetPrice}>
             Wunschpreis: 70 €

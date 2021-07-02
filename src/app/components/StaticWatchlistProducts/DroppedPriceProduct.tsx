@@ -21,9 +21,7 @@ function DroppedPriceProduct(): JSX.Element {
           Noise-Cancelling-Kopfhörer im Ohr sitzend kabellos Apple Siri
           Bluetooth 5.0 5 h Betriebszeit
         </p>
-        <p className={styles.droppedPriceProduct__price}>
-          Aktueller Preis: ab 154,99 €
-        </p>
+        <p className={styles.droppedPriceProduct__price}>ab 154,99 €</p>
         <div className={styles.droppedPriceProduct__targetPriceWrapper}>
           <p className={styles.droppedPriceProduct__targetPrice}>
             Wunschpreis: 160 €
