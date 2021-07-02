@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, RouteProps } from 'react-router-dom';
 import styles from './App.module.css';
-
 import LandingPage from './pages/LandingPage/LandingPage';
 import SearchProduct from './pages/SearchProduct/SearchProduct';
 import WatchList from './pages/WatchList/WatchList';

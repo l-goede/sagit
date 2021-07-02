@@ -5,7 +5,9 @@ import styles from './LandingPage.module.css';
 
 function LandingPage(): JSX.Element {
   const history = useHistory();
-  history.push('/search');
+  setTimeout(() => {
+    history.push('/search');
+  }, 4000);
   return (
     <div className={styles.landingPage}>
       <StartLogoIcon />
