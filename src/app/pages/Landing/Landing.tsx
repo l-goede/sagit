@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import StartLogoIcon from '../../components/Icons/StartLogoIcon';
 import styles from './LandingPage.module.css';
 
-function LandingPage(): JSX.Element {
+function Landing(): JSX.Element {
   const history = useHistory();
   setTimeout(() => {
     history.push('/search');
@@ -15,4 +15,4 @@ function LandingPage(): JSX.Element {
   );
 }
 
-export default LandingPage;
+export default Landing;
