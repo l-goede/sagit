@@ -5,10 +5,15 @@ import styles from './WatchlistProduct.module.css';
 
 type ProductProps = {
   product: Product;
+  targetPrice: number;
   onClick?: () => void;
 };
 
-function WatchlistProduct({ product, onClick }: ProductProps): JSX.Element {
+function WatchlistProduct({
+  product,
+  onClick,
+  targetPrice,
+}: ProductProps): JSX.Element {
   return (
     <div className={styles.watchlistProduct} onClick={onClick}>
       <img className={styles.watchlistProduct__img} src={product.image} />
@@ -25,9 +30,9 @@ function WatchlistProduct({ product, onClick }: ProductProps): JSX.Element {
         <p className={styles.watchlistProduct__price}>
           Aktueller Preis: {product.price}
         </p>
-        {product.targetPrice && (
+        {targetPrice && (
           <p className={styles.watchlistProduct__targetPrice}>
-            Wunschpreis: {product.targetPrice} €
+            Wunschpreis: {targetPrice} €
           </p>
         )}
       </div>
