@@ -21,10 +21,10 @@ function DroppedPriceProduct(): JSX.Element {
           Bluetooth 5.0 5 h Betriebszeit
         </p>
         <p className={styles.droppedPriceProduct__price}>
-          Aktueller Preis: ab 120 €
+          Aktueller Preis: ab 154,99 €
         </p>
         <p className={styles.droppedPriceProduct__targetPrice}>
-          Wunschpreis: 127 €
+          Wunschpreis: 160 €
         </p>
       </div>
     </div>

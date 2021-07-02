@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '../../../types';
 import SavedIcon from '../Icons/SavedIcon';
+import ShopLink from '../ShopLink/ShopLink';
 import styles from './WatchlistProduct.module.css';
 
 type ProductProps = {
@@ -27,6 +28,9 @@ function WatchlistProduct({
         <p className={styles.watchlistProduct__description}>
           {product.description}
         </p>
+        <button>
+          <ShopLink />
+        </button>
         <p className={styles.watchlistProduct__price}>
           Aktueller Preis: {product.price}
         </p>
