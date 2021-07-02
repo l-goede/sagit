@@ -11,7 +11,8 @@ const useFetch = (url: string): any => {
         setData(json);
       };
       fetchData();
-    }, 200);
+      console.log('bounce');
+    }, 500);
     return () => {
       clearTimeout(timeout);
     };
