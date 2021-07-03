@@ -1,6 +1,7 @@
 import React from 'react';
 import BackButton from '../BackButton/BackButton';
 import styles from './WatchlistHeader.module.css';
+
 type WatchlistHeaderProps = {
   headline: string;
 };
