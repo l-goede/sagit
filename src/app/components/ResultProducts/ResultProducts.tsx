@@ -19,14 +19,14 @@ function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
         </p>
         <p className={styles.resultProduct__price}>{product.price}</p>
         {product.targetPrice && (
-          <p className={styles.resultProduct__price}>
+          <p className={styles.resultProduct__targetPrice}>
             Wunschpreis: {product.targetPrice} €
           </p>
         )}
+        <button className={styles.resultProduct__icon}>
+          <SaveIcon />
+        </button>
       </div>
-      <button className={styles.resultProduct__icon}>
-        <SaveIcon />
-      </button>
     </article>
   );
 }

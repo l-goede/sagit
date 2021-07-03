@@ -14,22 +14,20 @@ function StaticWatchlistProduct(): JSX.Element {
         <p className={styles.staticWatchlistProduct__title}>
           Bang & Olufsen BeoPlay E8
         </p>
-
         <p className={styles.staticWatchlistProduct__description}>
-          Bluetooth-Kopfhörer im Ohr sitzend kabellos Bluetooth 4.2 Frequenzgang
-          20 - 20.000 Hz
+          Bluetooth-Kopfhörer im Ohr sitzend kabellos
         </p>
         <p className={styles.staticWatchlistProduct__price}>ab 81,95 €</p>
         <p className={styles.staticWatchlistProduct__targetPrice}>
           Wunschpreis: 70 €
         </p>
+        <button className={styles.staticWatchlistProduct__icon}>
+          <SavedIcon />
+        </button>
         <button className={styles.staticwatchlistProduct__shoplink}>
           <ShopLink />
         </button>
       </div>
-      <button className={styles.staticWatchlistProduct__icon}>
-        <SavedIcon />
-      </button>
     </article>
   );
 }

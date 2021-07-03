@@ -8,8 +8,8 @@
   width: 80%;
   max-width: 40em;
   transition: all ease-in-out 150ms;
-  align-content: space-between;
 }
+
 .staticWatchlistProduct:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -25,28 +25,32 @@
 }
 
 .staticWatchlistProduct__text {
-  display: flex;
-  flex-shrink: 1;
-  flex-direction: column;
-  margin: 0.5em 0;
+  display: grid;
+  margin: 0.4em 0;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr auto;
 }
 
 .staticWatchlistProduct__text:nth-child(2) {
   overflow: hidden;
 }
 
-.statictWatchlistProduct__title {
+.staticWatchlistProduct__title {
+  grid-row: 1;
+  align-self: start;
   font-size: 0.9em;
   padding: 0;
   margin: 0;
-  max-width: 80%;
 }
 
 .staticWatchlistProduct__icon {
-  position: fixed;
-  right: 10%;
+  grid-column: 2;
+  align-self: start;
   background: none;
   border: none;
+  padding: 0;
+  margin-right: 0.4em;
+  margin-top: 0;
 }
 .staticWatchlistProduct__icon:hover {
   cursor: pointer;
@@ -55,20 +59,20 @@
 }
 
 .staticWatchlistProduct__description {
+  grid-row: 2;
   color: var(--primary-color);
   font-size: 0.8em;
   margin: 0.25em 0;
-  width: 70%;
-  max-width: 80%;
   letter-spacing: 0;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.staticWatchlistProduct__price {
+.statictWatchlistProduct__price {
+  grid-row: 3;
   color: var(--secondary-text-color);
   font-size: 0.9em;
   margin: 0.25em 0;
-  padding-bottom: 1em;
 }
 
 .staticWatchlistProduct__targetPrice {

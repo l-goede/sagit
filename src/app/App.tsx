@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, RouteProps } from 'react-router-dom';
 import styles from './App.module.css';
 import Landing from './pages/Landing/Landing';
 import SearchProduct from './pages/SearchProduct/SearchProduct';
-import WatchList from './pages/WatchList/WatchList';
+import WatchList from './pages/Watchlist/WatchList';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
