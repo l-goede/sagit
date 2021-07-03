@@ -6,6 +6,7 @@ import WatchlistHeader from '../../components/WatchlistHeader/WatchlistHeader';
 import styles from './Watchlist.module.css';
 import DroppedPriceProduct from '../../components/StaticWatchlistProducts/DroppedPriceProduct';
 import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct';
+import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
 
 function Watchlist(): JSX.Element {
   const watchlistItems: WatchlistItem[] = useFetch('/api/products');
@@ -17,7 +18,9 @@ function Watchlist(): JSX.Element {
       <main className={styles.main}>
         <div className={styles.staticProducts}>
           <DroppedPriceProduct />
+          <StaticWatchlistProduct />
         </div>
+
         <div className={styles.dynamicProducts}>
           {watchlistItems &&
             watchlistItems.map((watchlistItem: WatchlistItem) => (

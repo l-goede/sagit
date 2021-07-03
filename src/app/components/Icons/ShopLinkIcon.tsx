@@ -2,7 +2,7 @@ import React from 'react';
 
 function ShopLinkIcon(): JSX.Element {
   return (
-    <svg width="35" height="20" viewBox="0 0 35 33.5">
+    <svg width="20" height="20" viewBox="0 0 35 33.5">
       <g
         id="Icon_feather-shopping-cart"
         data-name="Icon feather-shopping-cart"

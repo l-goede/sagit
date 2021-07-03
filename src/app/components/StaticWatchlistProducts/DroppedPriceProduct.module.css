@@ -6,13 +6,10 @@
   max-height: 9em;
   width: 90vw;
   max-width: 40em;
-  transition: all ease-in-out 150ms;
   align-content: space-between;
 }
 .droppedPriceProduct:hover {
   cursor: pointer;
-  transform: scale(1.1);
-  transition: all ease-in-out 150ms;
 }
 .droppedPriceProduct__wrapper {
   display: grid;
@@ -22,8 +19,8 @@
 .droppedPriceProduct__img {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
   object-fit: scale-down;
   place-self: center;
 }
@@ -58,7 +55,6 @@
 .droppedPriceProduct__icon:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: all ease-in-out 150ms;
 }
 
 .droppedPriceProduct__description {
@@ -81,15 +77,21 @@
   grid-row: 4;
   color: var(--price-text-color);
   font-size: 0.9em;
-  margin: 0 0 0.4em 0;
+  margin: 0 0 0.2em 0;
+  align-self: center;
 }
 
 .droppedPriceProduct__shoplink {
   grid-row: 4;
   border: none;
   background: none;
-  justify-items: end;
+  padding: 0;
+  margin: 0 0 0.2em 0;
   align-items: end;
-  justify-content: end;
-  align-content: end;
+}
+
+.staticWatchlistProduct__shoplink:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out 150ms;
 }
