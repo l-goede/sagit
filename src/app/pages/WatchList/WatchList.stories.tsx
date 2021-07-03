@@ -1,12 +1,12 @@
 import React from 'react';
-import WatchList from './WatchList';
+import Watchlist from './Watchlist';
 
 export default {
   title: 'Page/WatchList',
-  component: WatchList,
+  component: Watchlist,
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export const Watch = (): JSX.Element => <WatchList />;
+export const Watch = (): JSX.Element => <Watchlist />;

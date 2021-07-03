@@ -79,6 +79,12 @@
   cursor: pointer;
 }
 
+.header__logo {
+  position: absolute;
+  left: 43%;
+  top: 1%;
+}
+
 .header {
   display: flex;
   justify-content: center;

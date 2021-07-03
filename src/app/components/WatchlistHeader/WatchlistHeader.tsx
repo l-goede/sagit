@@ -1,12 +1,11 @@
 import React from 'react';
 import BackButton from '../BackButton/BackButton';
-import styles from './WatchListHeader.module.css';
+import styles from './WatchlistHeader.module.css';
 
-type WatchListHeaderProps = {
+type WatchlistHeaderProps = {
   headline: string;
 };
-
-function WatchListHeader({ headline }: WatchListHeaderProps): JSX.Element {
+function WatchlistHeader({ headline }: WatchlistHeaderProps): JSX.Element {
   return (
     <div className={styles.container}>
       <button className={styles.backButton}>
@@ -16,5 +15,4 @@ function WatchListHeader({ headline }: WatchListHeaderProps): JSX.Element {
     </div>
   );
 }
-
-export default WatchListHeader;
+export default WatchlistHeader;

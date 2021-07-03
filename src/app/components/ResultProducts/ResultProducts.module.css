@@ -1,72 +1,80 @@
 .resultProduct {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   border-radius: 0.5em;
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   margin: 0 auto;
-  height: 9em;
-  width: 80%;
-  max-width: 25em;
+  max-height: 9em;
+  width: 90vw;
+  max-width: 40em;
   transition: all ease-in-out 150ms;
+  align-content: space-between;
 }
 .resultProduct:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all ease-in-out 150ms;
 }
+.resultProduct__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 
 .resultProduct__img {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   object-fit: scale-down;
+  margin: 0.2em;
 }
 
-.resultProduct__card {
-  height: min-content;
-  padding-left: 1em;
-  margin-right: 1em;
+.resultProduct__text {
+  display: grid;
+  margin: 0.4em 0;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr auto;
 }
 
-.resultProduct__titleWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.resultProduct__icon {
-  color: var(--secondary-text-color);
-  background: none;
-  border: none;
-}
-
-.resultProduct__icon:hover {
-  cursor: pointer;
+.resultProduct__text:nth-child(2) {
+  overflow: hidden;
 }
 
 .resultProduct__title {
+  grid-row: 1;
+  align-self: start;
   font-size: 0.9em;
   padding: 0;
   margin: 0;
-  max-width: 80%;
+}
+
+.resultProduct__icon {
+  grid-column: 2;
+  align-self: start;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 0.4em;
+  margin-top: 0;
+}
+.resultProduct__icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out 150ms;
 }
 
 .resultProduct__description {
+  grid-row: 2;
   color: var(--primary-color);
   font-size: 0.8em;
-  margin-top: 0;
-  margin-bottom: 0.25em;
-  max-width: 80%;
+  margin: 0.25em 0;
   letter-spacing: 0;
   overflow: hidden;
-  width: 100%;
   text-overflow: ellipsis;
 }
 
 .resultProduct__price {
+  grid-row: 3;
   color: var(--secondary-text-color);
   font-size: 0.9em;
-  margin: 0.25em 0;
-  padding-bottom: 1em;
+  margin: 0;
 }

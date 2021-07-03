@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, RouteProps } from 'react-router-dom';
 import styles from './App.module.css';
-
-import LandingPage from './pages/LandingPage/LandingPage';
+import Landing from './pages/Landing/Landing';
 import SearchProduct from './pages/SearchProduct/SearchProduct';
-import WatchList from './pages/WatchList/WatchList';
+import Watchlist from './pages/Watchlist/Watchlist';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -12,9 +11,9 @@ type CustomRouteProps = RouteProps & {
 };
 
 const routes: CustomRouteProps[] = [
-  { path: '/', Component: LandingPage, exact: true },
+  { path: '/', Component: Landing, exact: true },
   { path: '/search', Component: SearchProduct },
-  { path: '/watchlist', Component: WatchList },
+  { path: '/watchlist', Component: Watchlist },
 ];
 
 function App(): JSX.Element {

@@ -1,74 +1,98 @@
 .droppedPriceProduct {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   border-radius: 0.5em;
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   margin: 0 auto;
-  height: 9em;
-  width: 80%;
-  max-width: 25em;
+  max-height: 9em;
+  width: 90vw;
+  max-width: 40em;
+  align-content: space-between;
 }
-
 .droppedPriceProduct:hover {
   cursor: pointer;
+}
+.droppedPriceProduct__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .droppedPriceProduct__img {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  height: 100%;
-  width: 100%;
+  height: 70%;
+  width: 70%;
   object-fit: scale-down;
+  place-self: center;
 }
 
-.droppedPriceProduct__card {
-  padding-left: 1em;
-  margin-right: 1em;
+.droppedPriceProduct__text {
+  display: grid;
+  margin: 0.4em 0.4em 0;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr auto;
 }
 
-.droppedPriceProduct__titleWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.droppedPriceProduct__text:nth-child(2) {
+  overflow: hidden;
+}
+
+.droppedPriceProduct__title {
+  grid-row: 1;
+  align-self: start;
+  font-size: 0.9em;
+  padding: 0;
+  margin: 0;
 }
 
 .droppedPriceProduct__icon {
-  color: var(--secondary-text-color);
+  grid-column: 2;
+  justify-self: end;
   background: none;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .droppedPriceProduct__icon:hover {
   cursor: pointer;
-}
-
-.droppedPriceProduct__title {
-  font-size: 0.9em;
-  padding: 0;
-  margin: 0;
-  max-width: 80%;
+  transform: scale(1.1);
 }
 
 .droppedPriceProduct__description {
+  grid-row: 2;
   color: var(--primary-color);
   font-size: 0.8em;
-  margin-top: 0;
-  margin-bottom: 0.25em;
-  max-width: 80%;
+  margin: 0.25em 0;
   letter-spacing: 0;
   overflow: hidden;
-  width: 100%;
   text-overflow: ellipsis;
 }
 
 .droppedPriceProduct__price {
+  grid-row: 3;
   color: var(--notification-color);
   font-size: 0.9em;
-  margin: 0.25em 0;
+  margin: 0.2em 0;
 }
-
 .droppedPriceProduct__targetPrice {
+  grid-row: 4;
   color: var(--price-text-color);
   font-size: 0.9em;
-  margin: 0.25em 0;
+  margin: 0 0 0.2em 0;
+  align-self: center;
+}
+
+.droppedPriceProduct__shoplink {
+  grid-row: 4;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 0 0.2em 0;
+  align-items: end;
+}
+
+.staticWatchlistProduct__shoplink:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out 150ms;
 }

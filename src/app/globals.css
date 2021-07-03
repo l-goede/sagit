@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap');
+@font-face {
+  font-family: WorkSans;
+  src: '/assets/fonts/WorkSans-Black.tff';
+}
 
 *,
 *::after,
@@ -12,7 +15,7 @@
 
   /* COLORS */
   --primary-color: #726e67;
-  --primary-text-color: #000;
+  --primary-text-color: rgb(78, 69, 69);
   --secondary-text-color: #866835;
   --price-text-color: #6961ed;
   --background-color: #fff;

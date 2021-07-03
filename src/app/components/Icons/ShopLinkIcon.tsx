@@ -2,56 +2,36 @@ import React from 'react';
 
 function ShopLinkIcon(): JSX.Element {
   return (
-    <svg width="80" height="44" viewBox="0 0 80 44">
-      <defs>
-        <filter
-          id="Rechteck_92"
-          x="0"
-          y="0"
-          width="80"
-          height="44"
-          filterUnits="userSpaceOnUse"
-        >
-          <feOffset dy="3" />
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood flood-opacity="0.161" />
-          <feComposite operator="in" in2="blur" />
-          <feComposite in="SourceGraphic" />
-        </filter>
-      </defs>
-      <g transform="translate(-323 -189)">
-        <g transform="matrix(1, 0, 0, 1, 323, 189)" filter="url(#Rechteck_92)">
-          <g
-            id="Rechteck_92-2"
-            data-name="Rechteck 92"
-            transform="translate(9 6)"
-            fill="#fff"
-            stroke="rgba(134,104,53,0.5)"
-            stroke-width="1"
-          >
-            <path
-              d="M4,0H58a4,4,0,0,1,4,4V26a0,0,0,0,1,0,0H6a6,6,0,0,1-6-6V4A4,4,0,0,1,4,0Z"
-              stroke="none"
-            />
-            <path
-              d="M4,.5H58A3.5,3.5,0,0,1,61.5,4V25a.5.5,0,0,1-.5.5H6A5.5,5.5,0,0,1,.5,20V4A3.5,3.5,0,0,1,4,.5Z"
-              fill="none"
-            />
-          </g>
-        </g>
-        <text
-          id="Zum_Shop"
-          data-name="Zum Shop"
-          transform="translate(336 201)"
-          fill="#726e6e"
-          font-size="10"
-          font-family="WorkSans-Regular, Work Sans"
-          letter-spacing="0.04em"
-        >
-          <tspan x="0" y="9">
-            Zum Shop
-          </tspan>
-        </text>
+    <svg width="20" height="20" viewBox="0 0 35 33.5">
+      <g
+        id="Icon_feather-shopping-cart"
+        data-name="Icon feather-shopping-cart"
+        transform="translate(-0.5 -0.5)"
+      >
+        <path
+          d="M15,31.5A1.5,1.5,0,1,1,13.5,30,1.5,1.5,0,0,1,15,31.5Z"
+          fill="none"
+          stroke="var(--secondary-text-color)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          d="M31.5,31.5A1.5,1.5,0,1,1,30,30,1.5,1.5,0,0,1,31.5,31.5Z"
+          fill="none"
+          stroke="var(--secondary-text-color)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          d="M1.5,1.5h6l4.02,20.085a3,3,0,0,0,3,2.415H29.1a3,3,0,0,0,3-2.415L34.5,9H9"
+          fill="none"
+          stroke="var(--secondary-text-color)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </g>
     </svg>
   );

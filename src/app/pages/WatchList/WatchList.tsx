@@ -2,23 +2,32 @@ import React from 'react';
 import { WatchlistItem } from '../../../types';
 import Footer from '../../components/Footer/Footer';
 import useFetch from '../../components/hooks/useFetch';
-import WatchListHeader from '../../components/WatchList/WatchListHeader';
-import styles from '../../components/ResultProducts/ResultProducts.module.css';
-import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
+import WatchlistHeader from '../../components/WatchlistHeader/WatchlistHeader';
+import styles from './Watchlist.module.css';
 import DroppedPriceProduct from '../../components/StaticWatchlistProducts/DroppedPriceProduct';
 import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct';
+import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
+import Logo from '../../components/Icons/Logo';
 
-function WatchList(): JSX.Element {
+function Watchlist(): JSX.Element {
   const watchlistItems: WatchlistItem[] = useFetch('/api/products');
   console.log(watchlistItems);
 
   return (
     <div className={styles.container}>
-      <WatchListHeader headline="Deine Merkliste" />
+      <div className={styles.watchlistProduct__logo}>
+        <Logo />
+      </div>
+      <div className={styles.watchlistProduct__header}>
+        <WatchlistHeader headline="Deine Merkliste" />
+      </div>
       <main className={styles.main}>
-        <DroppedPriceProduct />
-        <StaticWatchlistProduct />
-        <div className={styles.cards}>
+        <div className={styles.staticProducts}>
+          <DroppedPriceProduct />
+          <StaticWatchlistProduct />
+        </div>
+
+        <div className={styles.dynamicProducts}>
           {watchlistItems &&
             watchlistItems.map((watchlistItem: WatchlistItem) => (
               <WatchlistProduct
@@ -36,4 +45,4 @@ function WatchList(): JSX.Element {
   );
 }
 
-export default WatchList;
+export default Watchlist;
