@@ -1,5 +1,6 @@
 import React from 'react';
-import SavedIcon from '../Icons/SavedIcon';
+import RingIcon from '../Icons/RingIcon';
+
 import ShopLink from '../ShopLink/ShopLink';
 import styles from './DroppedPriceProduct.module.css';
 
@@ -22,7 +23,7 @@ function DroppedPriceProduct(): JSX.Element {
             Wunschpreis: 160 €
           </p>
           <button className={styles.droppedPriceProduct__icon}>
-            <SavedIcon />
+            <RingIcon />
           </button>
           <button className={styles.droppedPriceProduct__shoplink}>
             <ShopLink />
