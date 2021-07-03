@@ -16,6 +16,10 @@
   transform: scale(1.1);
   transition: all ease-in-out 150ms;
 }
+.resultProduct__wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
 
 .resultProduct__img {
   border-bottom-left-radius: 0.5em;
