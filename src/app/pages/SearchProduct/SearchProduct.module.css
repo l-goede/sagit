@@ -79,6 +79,12 @@
   cursor: pointer;
 }
 
+.testLogo {
+  position: fixed;
+  left: 40%;
+  top: 1%;
+}
+
 .header {
   display: flex;
   justify-content: center;

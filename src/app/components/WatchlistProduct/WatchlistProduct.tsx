@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '../../../types';
 import SavedIcon from '../Icons/SavedIcon';
+
 import ShopLink from '../ShopLink/ShopLink';
 import styles from './WatchlistProduct.module.css';
 

@@ -11,6 +11,7 @@
 .watchlistProduct:hover {
   cursor: pointer;
 }
+
 .watchlistProduct__wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;

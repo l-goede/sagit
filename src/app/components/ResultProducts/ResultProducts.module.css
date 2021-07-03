@@ -22,9 +22,10 @@
 .resultProduct__img {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   object-fit: scale-down;
+  margin: 0.2em;
 }
 
 .resultProduct__text {
