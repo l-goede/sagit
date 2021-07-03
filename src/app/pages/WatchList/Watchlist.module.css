@@ -3,3 +3,8 @@
   grid-row-gap: 1em;
   margin-top: 1em;
 }
+.main {
+  display: grid;
+  grid-row-gap: 1em;
+  margin-top: 1em;
+}

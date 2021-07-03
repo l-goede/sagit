@@ -10,41 +10,31 @@ type ProductProps = {
   onClick?: () => void;
 };
 
-function WatchlistProduct({
-  product,
-  onClick,
-  targetPrice,
-}: ProductProps): JSX.Element {
+function WatchlistProduct({ product, targetPrice }: ProductProps): JSX.Element {
   return (
-    <div className={styles.watchlistProduct} onClick={onClick}>
-      <img className={styles.watchlistProduct__img} src={product.image} />
-      <div className={styles.watchlistProduct__card}>
-        <div className={styles.watchlistProduct__titleWrapper}>
+    <article className={styles.watchlistProduct}>
+      <div className={styles.watchlistProduct__wrapper}>
+        <img className={styles.watchlistProduct__img} src={product.image} />
+        <div className={styles.watchlistProduct__text}>
           <p className={styles.watchlistProduct__title}>{product.title}</p>
-          <button className={styles.watchlistProduct__icon}>
-            <SavedIcon />
-          </button>
-        </div>
-
-        <p className={styles.watchlistProduct__description}>
-          {product.description}
-        </p>
-
-        <p className={styles.watchlistProduct__price}>
-          Aktueller Preis: {product.price}
-        </p>
-        <div className={styles.watchlistProduct__targetPriceWrapper}>
+          <p className={styles.watchlistProduct__description}>
+            {product.description}
+          </p>
+          <p className={styles.watchlistProduct__price}>{product.price}</p>
           {targetPrice && (
             <p className={styles.watchlistProduct__targetPrice}>
               Wunschpreis: {targetPrice} €
             </p>
           )}
+          <button className={styles.watchlistProduct__icon}>
+            <SavedIcon />
+          </button>
           <button className={styles.watchlistProduct__shoplink}>
             <ShopLink />
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 export default WatchlistProduct;
