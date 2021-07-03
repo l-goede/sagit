@@ -18,7 +18,9 @@ function Watchlist(): JSX.Element {
       <div className={styles.watchlistProduct__logo}>
         <TestLogo />
       </div>
-      <WatchlistHeader headline="Deine Merkliste" />
+      <div className={styles.watchlistProduct__header}>
+        <WatchlistHeader headline="Deine Merkliste" />
+      </div>
       <main className={styles.main}>
         <div className={styles.staticProducts}>
           <DroppedPriceProduct />

@@ -7,6 +7,7 @@
   width: 90vw;
   max-width: 40em;
   align-content: space-between;
+  margin-top: 1em;
 }
 .watchlistProduct:hover {
   cursor: pointer;
@@ -70,7 +71,7 @@
 
 .watchlistProduct__price {
   grid-row: 3;
-  color: var(--notification-color);
+  color: var(--secondary-text-color);
   font-size: 0.9em;
   margin: 0.2em 0;
 }
