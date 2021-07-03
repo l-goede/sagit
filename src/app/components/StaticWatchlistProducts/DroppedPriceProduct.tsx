@@ -1,6 +1,6 @@
 import React from 'react';
 import SavedIcon from '../Icons/SavedIcon';
-// import ShopLink from '../ShopLink/ShopLink';
+import ShopLink from '../ShopLink/ShopLink';
 import styles from './DroppedPriceProduct.module.css';
 
 function DroppedPriceProduct(): JSX.Element {
@@ -24,9 +24,9 @@ function DroppedPriceProduct(): JSX.Element {
           <button className={styles.droppedPriceProduct__icon}>
             <SavedIcon />
           </button>
-          {/* <button className={styles.droppedPriceProduct__shoplink}>
-          <ShopLink />
-        </button> */}
+          <button className={styles.droppedPriceProduct__shoplink}>
+            <ShopLink />
+          </button>
         </div>
       </div>
     </article>

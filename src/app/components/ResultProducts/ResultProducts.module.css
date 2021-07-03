@@ -1,7 +1,5 @@
 .resultProduct {
   display: flex;
-
-  /* grid-template-columns: 1fr 2fr; */
   border-radius: 0.5em;
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   margin: 0 auto;
@@ -18,7 +16,7 @@
 }
 .resultProduct__wrapper {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .resultProduct__img {
