@@ -15,8 +15,10 @@ function Watchlist(): JSX.Element {
     <div className={styles.container}>
       <WatchlistHeader headline="Deine Merkliste" />
       <main className={styles.main}>
-        <DroppedPriceProduct />
-        <div className={styles.cards}>
+        <div className={styles.staticProducts}>
+          <DroppedPriceProduct />
+        </div>
+        <div className={styles.dynamicProducts}>
           {watchlistItems &&
             watchlistItems.map((watchlistItem: WatchlistItem) => (
               <WatchlistProduct

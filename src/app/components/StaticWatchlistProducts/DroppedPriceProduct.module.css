@@ -1,11 +1,10 @@
 .droppedPriceProduct {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   border-radius: 0.5em;
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   margin: 0 auto;
   max-height: 9em;
-  width: 80%;
+  width: 90vw;
   max-width: 40em;
   transition: all ease-in-out 150ms;
   align-content: space-between;
@@ -14,6 +13,10 @@
   cursor: pointer;
   transform: scale(1.1);
   transition: all ease-in-out 150ms;
+}
+.droppedPriceProduct__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .droppedPriceProduct__img {
@@ -69,7 +72,7 @@
 
 .droppedPriceProduct__price {
   grid-row: 3;
-  color: var(--notification-text-color);
+  color: var(--notification-color);
   font-size: 0.9em;
   margin: 0.2em 0;
 }
