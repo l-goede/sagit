@@ -23,9 +23,9 @@ function DroppedPriceProduct(): JSX.Element {
         <button className={styles.droppedPriceProduct__icon}>
           <SavedIcon />
         </button>
-        <button className={styles.droppedPriceProduct__shoplink}>
+        {/* <button className={styles.droppedPriceProduct__shoplink}>
           <ShopLink />
-        </button>
+        </button> */}
       </div>
     </article>
   );

@@ -3,8 +3,7 @@ import { WatchlistItem } from '../../../types';
 import Footer from '../../components/Footer/Footer';
 import useFetch from '../../components/hooks/useFetch';
 import WatchlistHeader from '../../components/WatchlistHeader/WatchlistHeader';
-import styles from '../../components/ResultProducts/ResultProducts.module.css';
-import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
+import styles from './Watchlist.module.css';
 import DroppedPriceProduct from '../../components/StaticWatchlistProducts/DroppedPriceProduct';
 import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct';
 
@@ -17,7 +16,6 @@ function Watchlist(): JSX.Element {
       <WatchlistHeader headline="Deine Merkliste" />
       <main className={styles.main}>
         <DroppedPriceProduct />
-        <StaticWatchlistProduct />
         <div className={styles.cards}>
           {watchlistItems &&
             watchlistItems.map((watchlistItem: WatchlistItem) => (
