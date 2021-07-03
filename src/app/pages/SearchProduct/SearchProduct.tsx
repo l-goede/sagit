@@ -7,8 +7,7 @@ import useFetch from '../../components/hooks/useFetch';
 import type { Product } from '../../../types';
 import PriceInputField from '../../components/PriceInputField/PriceInputField';
 import CloseModalIcon from '../../components/Icons/CloseModalIcon';
-
-import LogoIcon from '../../components/Icons/StartLogoIcon';
+import Logo from '../../components/Icons/Logo';
 
 async function postTargetPrice(product: Product, targetPrice: number | '') {
   const response = await fetch('/api/products', {
@@ -44,7 +43,7 @@ function SearchProduct(): JSX.Element {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.header__logo}>
-          <LogoIcon />
+          <Logo />
         </div>
         <SearchField
           label="Dein Wunschprodukt"

@@ -7,7 +7,7 @@ import styles from './Watchlist.module.css';
 import DroppedPriceProduct from '../../components/StaticWatchlistProducts/DroppedPriceProduct';
 import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct';
 import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
-import LogoIcon from '../../components/Icons/StartLogoIcon';
+import Logo from '../../components/Icons/Logo';
 
 function Watchlist(): JSX.Element {
   const watchlistItems: WatchlistItem[] = useFetch('/api/products');
@@ -16,7 +16,7 @@ function Watchlist(): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.watchlistProduct__logo}>
-        <LogoIcon />
+        <Logo />
       </div>
       <div className={styles.watchlistProduct__header}>
         <WatchlistHeader headline="Deine Merkliste" />
