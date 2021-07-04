@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './SearchField.module.css';
-import { LabeledInput } from '../../../types';
+import { LabeledInputProps } from '../../../types';
 
 function SearchField({
   label,
   value,
   placeholder,
   onChange,
-}: LabeledInput): JSX.Element {
+}: LabeledInputProps): JSX.Element {
   return (
     <div className={styles.container}>
       <label>

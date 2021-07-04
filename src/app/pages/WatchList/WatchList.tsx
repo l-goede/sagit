@@ -13,7 +13,7 @@ function Watchlist(): JSX.Element {
   const watchlistItems: WatchlistItem[] = useFetch('/api/products');
 
   return (
-    <div className={styles.container}>
+    <div className={styles.watchlistProduct}>
       <div className={styles.watchlistProduct__logo}>
         <Logo />
       </div>
