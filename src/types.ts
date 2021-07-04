@@ -4,40 +4,46 @@ export type Product = {
   title: string;
   description?: string;
   price: string;
+  targetPrice?: number;
 };
 
 export type ResultProduct = {
   product: Product;
-  targetPrice: number;
+  targetPrice?: number;
   onClick?: () => void;
 };
 
-export type LabeledInput = {
+export type NavBarLinkProps = {
+  icon: JSX.Element;
+  link: string;
+};
+
+export type LabeledInputProps = {
   label: string;
   value: string;
   placeholder: string;
   onChange: (value: string) => void;
 };
 
-export type PriceInputField = {
+export type PriceInputFieldProps = {
   label: string;
   value: number | '';
   placeholder: string;
   onChange: (value: number) => void;
 };
 
-export type PriceInput = {
+export type PriceInputProps = {
   label: string;
   value: string;
   placeholder: string;
 };
 
-export type TargetPrice = {
+export type TargetPriceProps = {
   description: string;
-  targetPrice: number;
+  targetPrice: string;
 };
 
-export type WatchlistHeader = {
+export type WatchlistHeaderProps = {
   headline: string;
 };
 
