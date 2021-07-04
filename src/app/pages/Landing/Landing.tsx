@@ -7,7 +7,7 @@ function Landing(): JSX.Element {
   const history = useHistory();
   setTimeout(() => {
     history.push('/search');
-  }, 4000);
+  }, 5000);
   return (
     <div className={styles.landingPage}>
       <StartLogoIcon />

@@ -16,7 +16,7 @@ function DroppedPriceProduct(): JSX.Element {
           <p className={styles.droppedPriceProduct__title}>Apple AirPods Pro</p>
           <p className={styles.droppedPriceProduct__description}>
             Noise-Cancelling-Kopfhörer im Ohr sitzend kabellos Apple Siri
-            Bluetooth 5.0 5 h Betriebszeit
+            Bluetooth
           </p>
           <p className={styles.droppedPriceProduct__price}>ab 154,99 €</p>
           <p className={styles.droppedPriceProduct__targetPrice}>

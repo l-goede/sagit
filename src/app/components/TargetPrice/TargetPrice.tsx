@@ -1,10 +1,6 @@
 import React from 'react';
+import { TargetPriceProps } from '../../../types';
 import styles from './TargetPrice.module.css';
-
-type TargetPriceProps = {
-  description: string;
-  targetPrice: string;
-};
 
 function TargetPrice({
   description,

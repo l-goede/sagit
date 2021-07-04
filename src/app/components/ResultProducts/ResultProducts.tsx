@@ -1,14 +1,9 @@
 import React from 'react';
-import { Product } from '../../../types';
+import { ResultProduct } from '../../../types';
 import SaveIcon from '../Icons/SaveIcon';
 import styles from './ResultProducts.module.css';
 
-type ProductProps = {
-  product: Product;
-  onClick?: () => void;
-};
-
-function ResultProducts({ product, onClick }: ProductProps): JSX.Element {
+function ResultProducts({ product, onClick }: ResultProduct): JSX.Element {
   return (
     <article className={styles.resultProduct} onClick={onClick}>
       <div className={styles.resultProduct__wrapper}>

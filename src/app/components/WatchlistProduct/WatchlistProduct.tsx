@@ -1,15 +1,8 @@
 import React from 'react';
-import { Product } from '../../../types';
+import { ProductProps } from '../../../types';
 import SavedIcon from '../Icons/SavedIcon';
-
 import ShopLink from '../ShopLink/ShopLink';
 import styles from './WatchlistProduct.module.css';
-
-type ProductProps = {
-  product: Product;
-  targetPrice: number;
-  onClick?: () => void;
-};
 
 function WatchlistProduct({ product, targetPrice }: ProductProps): JSX.Element {
   return (
