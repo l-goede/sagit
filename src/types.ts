@@ -4,12 +4,11 @@ export type Product = {
   title: string;
   description?: string;
   price: string;
-  targetPrice?: number;
 };
 
 export type ResultProduct = {
   product: Product;
-  targetPrice?: number;
+  targetPrice: number;
   onClick?: () => void;
 };
 
