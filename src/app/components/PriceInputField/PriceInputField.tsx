@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './PriceInputField.module.css';
-import { PriceInputField } from '../../../types';
+import { PriceInputFieldProps } from '../../../types';
 
 function PriceInputField({
   label,
   value,
   placeholder,
   onChange,
-}: PriceInputField): JSX.Element {
+}: PriceInputFieldProps): JSX.Element {
   return (
     <div className={styles.container}>
       <label>

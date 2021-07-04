@@ -1,8 +1,11 @@
 import React from 'react';
-import { TargetPrice } from '../../../types';
+import { TargetPriceProps } from '../../../types';
 import styles from './TargetPrice.module.css';
 
-function TargetPrice({ description, targetPrice }: TargetPrice): JSX.Element {
+function TargetPrice({
+  description,
+  targetPrice,
+}: TargetPriceProps): JSX.Element {
   return (
     <div className={styles.container}>
       <p className={styles.description}>
