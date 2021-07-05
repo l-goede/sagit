@@ -11,10 +11,9 @@ import Logo from '../../components/Icons/Logo';
 
 function Watchlist(): JSX.Element {
   const watchlistItems: WatchlistItem[] = useFetch('/api/products');
-  console.log(watchlistItems);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.watchlistProduct}>
       <div className={styles.watchlistProduct__logo}>
         <Logo />
       </div>

@@ -1,12 +1,6 @@
 import React from 'react';
 import styles from './SearchField.module.css';
-
-type LabeledInputProps = {
-  label: string;
-  value: string;
-  placeholder: string;
-  onChange: (value: string) => void;
-};
+import { LabeledInputProps } from '../../../types';
 
 function SearchField({
   label,

@@ -1,9 +1,6 @@
 import React from 'react';
+import { NavBarLinkProps } from '../../../types';
 
-type NavBarLinkProps = {
-  icon: JSX.Element;
-  link: string;
-};
 function NavBarLink({ icon, link }: NavBarLinkProps): JSX.Element {
   return <a href={link}>{icon}</a>;
 }

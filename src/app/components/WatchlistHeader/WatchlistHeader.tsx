@@ -1,10 +1,8 @@
 import React from 'react';
+import { WatchlistHeaderProps } from '../../../types';
 import BackButton from '../BackButton/BackButton';
 import styles from './WatchlistHeader.module.css';
 
-type WatchlistHeaderProps = {
-  headline: string;
-};
 function WatchlistHeader({ headline }: WatchlistHeaderProps): JSX.Element {
   return (
     <div className={styles.container}>
