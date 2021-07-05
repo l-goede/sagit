@@ -19,8 +19,8 @@
 .staticWatchlistProduct__img {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  height: 80%;
   width: 80%;
+  max-height: 6em;
   object-fit: scale-down;
   place-self: center;
 }
