@@ -61,7 +61,7 @@
   padding: 1em;
   font-family: var(--primdary-font);
   color: var(--secondary-text-color);
-  font-size: 0.8em;
+  font-size: 0.8rem;
   background: white;
   border-radius: 0.5em;
   display: block;
@@ -81,8 +81,7 @@
 
 .header__logo {
   position: absolute;
-  left: 43%;
-  top: 1%;
+  top: 2%;
 }
 
 .header {
