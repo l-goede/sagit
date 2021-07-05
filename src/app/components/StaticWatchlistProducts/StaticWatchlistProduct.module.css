@@ -20,6 +20,7 @@
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
   width: 80%;
+  height: 80%;
   max-height: 6em;
   object-fit: scale-down;
   place-self: center;
