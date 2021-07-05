@@ -6,7 +6,7 @@ Sagit is a price app that shows you the top offers of your product. You can ente
 
 - [Heroku](https://sagit21.herokuapp.com/)
 
-- [Adobe XD](https://xd.adobe.com/view/4541dbd7-104f-4ff4-8339-ed2a32de749a-1012/)
+- [Adobe XD](https://xd.adobe.com/view/e0badda1-5add-4acd-b0fa-2283fa906a65-b5e9/)
 
 ## Installing / Getting started
 
