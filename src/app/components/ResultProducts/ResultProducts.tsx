@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResultProduct } from '../../../types';
+import { ResultProduct } from '../../types';
 import SaveIcon from '../Icons/SaveIcon';
 import styles from './ResultProducts.module.css';
 

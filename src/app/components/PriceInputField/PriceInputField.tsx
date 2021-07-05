@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PriceInputField.module.css';
-import { PriceInputFieldProps } from '../../../types';
+import { PriceInputFieldProps } from '../../types';
 
 function PriceInputField({
   label,

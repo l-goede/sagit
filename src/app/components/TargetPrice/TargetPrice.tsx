@@ -1,5 +1,5 @@
 import React from 'react';
-import { TargetPriceProps } from '../../../types';
+import { TargetPriceProps } from '../../types';
 import styles from './TargetPrice.module.css';
 
 function TargetPrice({

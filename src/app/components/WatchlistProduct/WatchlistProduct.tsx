@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResultProduct } from '../../../types';
+import { ResultProduct } from '../../types';
 import SavedIcon from '../Icons/SavedIcon';
 import ShopLink from '../ShopLink/ShopLink';
 import styles from './WatchlistProduct.module.css';
