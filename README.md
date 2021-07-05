@@ -4,9 +4,9 @@ Sagit is a price app that shows you the top offers of your product. You can ente
 
 ### Demo
 
-<img width="375px" height="672" align="left" alt="landing page" src="src/app/assets/landingpage.png"
+<img width="375px" height="672px" align="left" alt="landing page" src="src/app/assets/landingpage.png"
  />
-<img width="375px" height="672" align="center" alt="search page" src="src/app/assets/searchpage.png"
+<img width="375px" align="672px" alt="search page" src="src/app/assets/searchpage.png"
  />
 
 #### Here you can view and test the app:
