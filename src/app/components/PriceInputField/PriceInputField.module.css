@@ -1,6 +1,7 @@
 .container {
   display: grid;
   justify-items: center;
+  position: relative;
 }
 
 .container__label {
