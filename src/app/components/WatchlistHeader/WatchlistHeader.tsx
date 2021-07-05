@@ -1,5 +1,5 @@
 import React from 'react';
-import { WatchlistHeaderProps } from '../../../types';
+import { WatchlistHeaderProps } from '../../types';
 import BackButton from '../BackButton/BackButton';
 import styles from './WatchlistHeader.module.css';
 

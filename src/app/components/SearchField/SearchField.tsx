@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SearchField.module.css';
-import { LabeledInputProps } from '../../../types';
+import { LabeledInputProps } from '../../types';
 
 function SearchField({
   label,
