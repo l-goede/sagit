@@ -1,6 +1,6 @@
 @font-face {
-  font-family: WorkSans;
-  src: '/assets/fonts/WorkSans-Black.tff';
+  font-family: 'WorkSans';
+  src: url('/fonts/OpenSans-Regular-webfont.woff2');
 }
 
 *,
@@ -11,7 +11,7 @@
 
 :root {
   /* FONTS */
-  --primary-font: 'Work Sans', 'sans-serif';
+  --primary-font: 'Arial';
 
   /* COLORS */
   --primary-color: #726e67;

@@ -4,7 +4,7 @@
   box-shadow: 0 0.125em 0.6em rgba(0, 0, 0, 0.16);
   margin: 0 auto;
   max-height: 9em;
-  width: 90vw;
+  width: 80%;
   max-width: 40em;
   transition: all ease-in-out 150ms;
   align-content: space-between;
@@ -31,6 +31,7 @@
 .resultProduct__text {
   display: grid;
   margin: 0.4em 0;
+  word-wrap: normal;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr auto;
 }

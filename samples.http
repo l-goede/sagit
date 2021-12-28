@@ -13,12 +13,7 @@ GET {{baseUrl}}/api/search?product=iphone
 POST {{baseUrl}}/api/products HTTP/1.1
 Content-Type: application/json
 
-{
-  "title": "bu",
-  "vendor": "hu",
-  "price": "hu"
-    
-}
+
 
 ### Search for product in mongodb
 GET {{baseUrl}}/api/products

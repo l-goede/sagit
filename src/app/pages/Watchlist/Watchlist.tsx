@@ -6,7 +6,6 @@ import WatchlistHeader from '../../components/WatchlistHeader/WatchlistHeader';
 import styles from './Watchlist.module.css';
 import DroppedPriceProduct from '../../components/StaticWatchlistProducts/DroppedPriceProduct';
 import WatchlistProduct from '../../components/WatchlistProduct/WatchlistProduct';
-import StaticWatchlistProduct from '../../components/StaticWatchlistProducts/StaticWatchlistProduct';
 import Logo from '../../components/Icons/Logo';
 
 function Watchlist(): JSX.Element {
@@ -23,7 +22,6 @@ function Watchlist(): JSX.Element {
       <main className={styles.main}>
         <div className={styles.staticProducts}>
           <DroppedPriceProduct />
-          <StaticWatchlistProduct />
         </div>
 
         <div className={styles.dynamicProducts}>
